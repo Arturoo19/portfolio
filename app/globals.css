@@ -1,26 +1,152 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020617;
+  --foreground: #f8fafc;
+  --font-sans-stack: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif-stack: "Palatino Linotype", "Book Antiqua", Georgia,
+    "Times New Roman", serif;
+  --font-mono-stack: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-sans-stack);
+  --font-mono: var(--font-mono-stack);
+  --font-serif: var(--font-serif-stack);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans-stack);
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.45);
+  color: #ffffff;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-150%);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #020617;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.hero-stage {
+  --cursor-x: 18%;
+  --cursor-y: 26%;
+}
+
+.hero-base {
+  background:
+    radial-gradient(circle at 100% 34%, rgba(87, 70, 190, 0.34), transparent 30%),
+    radial-gradient(circle at 8% 30%, rgba(14, 165, 233, 0.3), transparent 28%),
+    linear-gradient(180deg, #020617 0%, #02040a 100%);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-position: center top;
+  background-size: 70px 70px;
+  opacity: 0.72;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
+}
+
+.hero-glow {
+  border-radius: 9999px;
+  filter: blur(42px);
+  opacity: 0.65;
+  transition:
+    left 650ms ease-out,
+    top 650ms ease-out,
+    transform 650ms ease-out;
+  will-change: left, top, transform;
+}
+
+.hero-glow-primary {
+  left: calc(var(--cursor-x) - 18rem);
+  top: calc(var(--cursor-y) - 18rem);
+  width: 34rem;
+  height: 34rem;
+  background: rgba(14, 165, 233, 0.26);
+  animation: glow-drift-primary 12s ease-in-out infinite alternate;
+}
+
+.hero-glow-secondary {
+  left: calc((100% - var(--cursor-x)) - 8rem);
+  top: calc((var(--cursor-y) * 0.62) + 3rem);
+  width: 30rem;
+  height: 30rem;
+  background: rgba(79, 70, 229, 0.26);
+  animation: glow-drift-secondary 15s ease-in-out infinite alternate;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes glow-drift-primary {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+}
+
+@keyframes glow-drift-secondary {
+  from {
+    transform: translate3d(3%, 2%, 0) scale(0.96);
+  }
+
+  to {
+    transform: translate3d(-4%, -2%, 0) scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  .reveal {
+    animation: none;
+    transition: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
