@@ -25,7 +25,7 @@ export function ProjectPreview({
 
   if (project.preview === "chat") {
     return (
-      <div className="h-44 rounded-xl border border-white/10 bg-slate-950/70 p-4 sm:h-56">
+      <div className="h-40 rounded-xl border border-white/10 bg-slate-950/70 p-4 sm:h-48">
         <div className="mb-4 flex items-center gap-3 border-b border-white/10 pb-3">
           <span className="size-3 rounded-full bg-blue-400" />
           <span className="ml-auto rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-1 text-sm font-semibold text-slate-300">
@@ -45,7 +45,7 @@ export function ProjectPreview({
 
   if (project.preview === "workflow") {
     return (
-      <div className="h-44 rounded-xl border border-white/10 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:28px_28px] p-4 sm:h-56 sm:p-6">
+      <div className="h-40 rounded-xl border border-white/10 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:28px_28px] p-4 sm:h-48 sm:p-5">
         <div className="mb-6 ml-auto w-fit rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-slate-300 sm:mb-8">
           {project.previewLabel}
         </div>
@@ -70,7 +70,7 @@ export function ProjectPreview({
 
   if (project.slug === "rentauto") {
     return (
-      <div className="relative h-44 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-56">
+    <div className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-48">
         <Image
           src={rentAutoHome}
           alt="RentAuto home page"
@@ -115,7 +115,7 @@ export function ProjectPreview({
   }
 
   return (
-    <div className="relative h-44 overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.25),transparent_30%),linear-gradient(135deg,#171717,#0f172a)] p-5 sm:h-56">
+    <div className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.25),transparent_30%),linear-gradient(135deg,#171717,#0f172a)] p-5 sm:h-48">
       <div className="absolute inset-x-5 top-5 flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-slate-400">
         <span>{labels.case}</span>
         <span>{labels.menu}</span>

@@ -29,10 +29,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { rootMargin: "0px 0px -12% 0px", threshold: 0.16 },
     );
@@ -46,7 +43,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
     <div
       ref={ref}
       className={cn("reveal", isVisible && "reveal-visible", className)}
-      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
+      style={{ "--reveal-delay": `${isVisible ? delay : 0}ms` } as CSSProperties}
     >
       {children}
     </div>

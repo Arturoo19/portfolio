@@ -23,6 +23,9 @@ export function ProjectCard({
   previewLabels,
   onOpen,
 }: ProjectCardProps) {
+  const visibleTags = project.tags.slice(0, 4);
+  const hiddenTagCount = project.tags.length - visibleTags.length;
+
   const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
     const card = event.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -62,11 +65,11 @@ export function ProjectCard({
   };
 
   const action = (
-    <div className="mt-7 flex cursor-pointer items-center justify-between border-t border-white/10 pt-5">
-      <span className="text-base font-bold text-slate-300 transition group-hover:text-white">
+    <div className="mt-5 flex cursor-pointer items-center justify-between border-t border-white/10 pt-4">
+      <span className="text-sm font-bold text-slate-300 transition group-hover:text-white">
         {detailsLabel}
       </span>
-      <span className="grid size-11 place-items-center rounded-full border border-white/10 text-lg text-slate-300 transition group-hover:border-blue-400 group-hover:text-blue-300">
+      <span className="grid size-9 place-items-center rounded-full border border-white/10 text-base text-slate-300 transition group-hover:border-blue-400 group-hover:text-blue-300">
         ↗
       </span>
     </div>
@@ -81,26 +84,27 @@ export function ProjectCard({
       role="button"
       tabIndex={0}
       aria-label={`${detailsLabel}: ${project.title}`}
-      className="project-card group relative isolate cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-4 focus:outline-none focus-visible:border-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70"
+      className="project-card group relative isolate cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-3 focus:outline-none focus-visible:border-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70"
     >
       <div className="project-card-content">
         <ProjectPreview project={project} labels={previewLabels} />
-        <div className="p-2 pt-7">
-          <div className="mb-4 flex items-start justify-between gap-4">
-            <h3 className="font-serif text-2xl font-semibold text-white">
+        <div className="px-2 pb-1 pt-5">
+          <div className="mb-3 flex items-start justify-between gap-4">
+            <h3 className="font-serif text-xl font-semibold text-white sm:text-2xl">
               {project.title}
             </h3>
             <span className="text-sm font-bold text-slate-500">
               {project.year}
             </span>
           </div>
-          <p className="text-base font-semibold leading-7 text-slate-400 sm:min-h-24">
+          <p className="line-clamp-3 text-sm font-semibold leading-6 text-slate-400 sm:text-base">
             {project.summary}
           </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {visibleTags.map((tag) => (
               <Tag key={tag}>{tag}</Tag>
             ))}
+            {hiddenTagCount > 0 ? <Tag>+{hiddenTagCount}</Tag> : null}
           </div>
           {action}
         </div>

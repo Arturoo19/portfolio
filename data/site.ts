@@ -195,30 +195,31 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     experience: {
       eyebrow: "Experience",
-      title: "Work-ready, not only project-ready",
+      title: "From code to production: experience that solves problems",
       description:
-        "My background combines full-stack development, production IT support, databases, cloud infrastructure, and automation.",
+        "I connect development, data, automation, and production systems: building useful tools, fixing real incidents, and keeping technical work moving.",
       items: [
         {
           company: "OPINATOR",
-          role: "Full-Stack Developer | IT Support Technician",
+          role: "IT Support Technician",
           period: "2026 - Present",
           summary:
-            "Daily work around production systems, infrastructure support, debugging, security tasks, and development assistance.",
+            "Hands-on production support across AWS, Linux, Git, security tasks, and developer tooling.",
           points: [
-            "Managed and migrated AWS EC2 virtual machines, including instance configuration and production maintenance.",
-            "Worked in Linux terminal environments with Git for version control and change management.",
-            "Diagnosed configuration issues and technical incidents by identifying root causes and reducing operational impact.",
-            "Supported cybersecurity tasks including log monitoring, access/IAM management, patches, and security updates.",
+            "Managed and migrated AWS EC2 virtual machines, including instance configuration and infrastructure maintenance in production.",
+            "Worked daily in Linux terminal environments, using Git for version control and change management.",
+            "Diagnosed and fixed configuration errors and technical incidents by identifying root causes and reducing operational impact.",
+            "Contributed to cybersecurity tasks: log and incident monitoring, access and IAM management, patches, and security updates.",
+            "Used Claude Code in the terminal to speed up development and technical support tasks.",
           ],
-          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Security"],
+          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Claude Code"],
         },
         {
           company: "Alenta",
           role: "Database Developer and Digital Support Intern",
           period: "2026",
           summary:
-            "Database maintenance and internal tooling for business process improvement.",
+            "Database and internal process support focused on making business information easier to manage.",
           points: [
             "Maintained corporate databases with Microsoft Access.",
             "Created queries, forms, and reports to optimize internal workflows.",
@@ -231,11 +232,12 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           role: "Automation and Web Developer Intern",
           period: "2025",
           summary:
-            "Web, database, and automation support for repetitive internal processes.",
+            "Web, database, and automation work for internal processes where repetitive tasks could be simplified.",
           points: [
             "Created and managed MySQL tables and SQL queries.",
             "Automated internal processes with Power Automate.",
-            "Configured WordPress websites and optimized repetitive data tasks.",
+            "Created and configured WordPress websites.",
+            "Optimized repetitive tasks related to data processing.",
           ],
           tags: ["MySQL", "Power Automate", "WordPress", "SQL"],
         },
@@ -245,7 +247,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Skills",
       title: "Full-stack capabilities",
       description:
-        "The areas I can contribute to in a product team or on selected freelance projects.",
+        "The areas where I can contribute to product teams, companies, and selected technical projects.",
       items: [
         {
           id: "frontend",
@@ -307,9 +309,9 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     about: {
       eyebrow: "About me",
-      title: "A full-stack developer who adapts quickly",
+      title: "I connect product, code, and operations",
       description:
-        "I have software engineering training and practical experience across web development, backend systems, databases, automation, and AI integrations. I like building complete products, but I also understand the operational side: debugging, deployments, infrastructure, security updates, and working with existing systems.",
+        "I work across web development, backend, databases, automation, cloud, and AI integrations. My value is not only writing code, but understanding the whole technical flow: from a user-facing feature to the systems, data, and infrastructure behind it.",
       stackLabel: "Stack",
       stack: [
         "Angular",
@@ -330,43 +332,43 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       cards: [
         {
           eyebrow: "Profile",
-          title: "Full-stack product builder",
+          title: "End-to-end thinking",
           description:
-            "I can move from UI to API to database and keep the whole feature understandable.",
+            "I can move from interface to API, database, and deployment without losing the goal of the feature.",
           tags: ["Frontend", "Backend", "Database"],
           href: "#projects",
         },
         {
           eyebrow: "Strength",
-          title: "Production mindset",
+          title: "Real systems experience",
           description:
-            "I have hands-on experience with Linux, AWS, logs, IAM, incident diagnosis, and security updates.",
+            "Hands-on work with Linux, AWS, logs, IAM, incident diagnosis, updates, and existing production environments.",
           tags: ["AWS", "Linux", "Support"],
           href: "#experience",
         },
         {
           eyebrow: "Extra",
-          title: "Automation and AI",
+          title: "Automation where it pays off",
           description:
-            "I use automation and AI as practical tools for reporting, support, internal workflows, and assistants.",
+            "I use automation and AI for reporting, support, internal workflows, and assistants when they save real time.",
           tags: ["n8n", "AI", "Bots"],
           href: "#services",
         },
         {
-          eyebrow: "Languages",
-          title: "Multilingual communicator",
+          eyebrow: "Way of working",
+          title: "Clear technical communication",
           description:
-            "Ukrainian native, Spanish C1, Russian C2, and English B1. Comfortable in international teams.",
-          tags: ["UA", "ES", "EN", "RU"],
+            "I explain decisions, ask the right questions, and keep technical work understandable for teams and business owners.",
+          tags: ["Clarity", "Teamwork", "Ownership"],
           href: "#contact",
         },
       ],
     },
     contact: {
       eyebrow: "Contact",
-      title: "Open to full-stack opportunities",
+      title: "Available for roles and technical projects",
       description:
-        "I am open to full-stack developer roles, internships/junior-mid opportunities, and selected freelance projects where web, backend, databases, automation, or AI can create real value.",
+        "Available for roles, collaborations, and selected business projects across web development, backend, data, automation, cloud, and AI.",
       primaryContact: "Main contact",
       telegram: "Message on Telegram",
       email: "Send an email",
@@ -501,47 +503,49 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     experience: {
       eyebrow: "Experiencia",
-      title: "Preparado para equipo, no solo para proyectos",
+      title: "Del codigo a produccion: experiencia que resuelve problemas",
       description:
-        "Mi perfil combina desarrollo full-stack, soporte IT en produccion, bases de datos, cloud y automatizacion.",
+        "Conecto desarrollo, datos, automatizacion y sistemas en produccion: creo herramientas utiles, resuelvo incidencias reales y ayudo a que el trabajo tecnico avance.",
       items: [
         {
           company: "OPINATOR",
-          role: "Full-Stack Developer | Tecnico de soporte IT",
+          role: "Tecnico de soporte IT",
           period: "2026 - actualidad",
           summary:
-            "Trabajo diario con sistemas de produccion, soporte de infraestructura, debugging, seguridad y apoyo al desarrollo.",
+            "Soporte practico en produccion con AWS, Linux, Git, tareas de seguridad y herramientas para desarrollo.",
           points: [
-            "Gestion y migracion de maquinas virtuales AWS EC2, incluyendo configuracion y mantenimiento en produccion.",
-            "Trabajo en entornos Linux mediante terminal con Git para control de versiones y cambios.",
-            "Diagnostico de incidencias tecnicas y errores de configuracion identificando la causa raiz.",
-            "Apoyo en ciberseguridad: monitorizacion de logs, IAM, accesos, parches y actualizaciones.",
+            "Gestion y migracion de maquinas virtuales en AWS EC2, incluyendo configuracion de instancias y mantenimiento de infraestructura en entorno de produccion.",
+            "Trabajo diario en entornos Linux mediante terminal, con uso de Git para control de versiones y gestion de cambios.",
+            "Diagnostico y correccion de errores de configuracion e incidencias tecnicas, identificando la causa raiz para minimizar impacto operativo.",
+            "Participacion en tareas de ciberseguridad: monitorizacion de logs e incidencias, gestion de accesos e IAM, y aplicacion de parches y actualizaciones de seguridad.",
+            "Uso de Claude Code en terminal para agilizar tareas de desarrollo y soporte tecnico.",
           ],
-          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Security"],
+          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Claude Code"],
         },
         {
           company: "Alenta",
-          role: "Desarrollador de bases de datos y soporte digital",
+          role: "Desarrollador de Bases de Datos y Soporte Digital (Practicas)",
           period: "2026",
           summary:
-            "Mantenimiento de bases de datos y herramientas internas para optimizar procesos.",
+            "Soporte a bases de datos y procesos internos para que la informacion empresarial sea mas clara y util.",
           points: [
-            "Mantenimiento de bases de datos corporativas con Microsoft Access.",
-            "Creacion de consultas, formularios e informes para procesos internos.",
-            "Organizacion de datos empresariales para mejorar la eficiencia operativa.",
+            "Gestion y mantenimiento de bases de datos corporativas mediante Microsoft Access.",
+            "Creacion de consultas, formularios e informes para optimizar procesos internos.",
+            "Organizacion y estructuracion de datos empresariales mejorando la eficiencia operativa.",
           ],
           tags: ["Microsoft Access", "Databases", "Reports"],
         },
         {
           company: "Naturprint Artes Graficas",
-          role: "Desarrollador de automatizacion y web",
+          role: "Desarrollador de Automatizacion y Web (Practicas)",
           period: "2025",
           summary:
-            "Soporte web, bases de datos y automatizacion de procesos internos repetitivos.",
+            "Trabajo web, bases de datos y automatizacion para reducir tareas repetitivas y ordenar procesos internos.",
           points: [
-            "Creacion y gestion de tablas MySQL y consultas SQL.",
-            "Automatizacion de procesos internos con Power Automate.",
-            "Configuracion de sitios WordPress y optimizacion de tareas de datos.",
+            "Desarrollo y gestion de bases de datos MySQL mediante creacion de tablas y consultas SQL.",
+            "Automatizacion de procesos internos utilizando Power Automate.",
+            "Creacion y configuracion de sitios web en WordPress.",
+            "Optimizacion de tareas repetitivas relacionadas con tratamiento de datos.",
           ],
           tags: ["MySQL", "Power Automate", "WordPress", "SQL"],
         },
@@ -551,7 +555,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Skills",
       title: "Capacidades full-stack",
       description:
-        "Areas donde puedo aportar en un equipo de producto o en proyectos freelance seleccionados.",
+        "Areas donde puedo aportar en equipos de producto, empresas y proyectos tecnicos seleccionados.",
       items: [
         {
           id: "frontend",
@@ -613,9 +617,9 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     about: {
       eyebrow: "Sobre mi",
-      title: "Un full-stack que se adapta rapido",
+      title: "Conecto producto, codigo y operacion",
       description:
-        "Tengo formacion en ingenieria de software y experiencia practica en desarrollo web, backend, bases de datos, automatizacion e integraciones IA. Me gusta construir productos completos, pero tambien entiendo la parte operativa: debugging, despliegues, infraestructura, seguridad y sistemas existentes.",
+        "Trabajo en desarrollo web, backend, bases de datos, automatizacion, cloud e integraciones IA. Mi valor no esta solo en escribir codigo, sino en entender el flujo tecnico completo: desde una funcionalidad visible para el usuario hasta los sistemas, datos e infraestructura que la sostienen.",
       stackLabel: "Stack",
       stack: [
         "Angular",
@@ -636,43 +640,43 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       cards: [
         {
           eyebrow: "Perfil",
-          title: "Constructor full-stack",
+          title: "Vision end-to-end",
           description:
-            "Puedo moverme de UI a API y base de datos manteniendo clara la feature completa.",
+            "Puedo moverme de interfaz a API, base de datos y despliegue sin perder el objetivo de la funcionalidad.",
           tags: ["Frontend", "Backend", "Database"],
           href: "#projects",
         },
         {
           eyebrow: "Fortaleza",
-          title: "Mentalidad de produccion",
+          title: "Experiencia con sistemas reales",
           description:
-            "Experiencia practica con Linux, AWS, logs, IAM, diagnostico de incidencias y actualizaciones.",
+            "Trabajo practico con Linux, AWS, logs, IAM, diagnostico de incidencias, actualizaciones y entornos existentes.",
           tags: ["AWS", "Linux", "Support"],
           href: "#experience",
         },
         {
           eyebrow: "Extra",
-          title: "Automatizacion e IA",
+          title: "Automatizacion con impacto",
           description:
-            "Uso automatizacion e IA para reporting, soporte, workflows internos y asistentes.",
+            "Uso automatizacion e IA para reporting, soporte, workflows internos y asistentes cuando ahorran tiempo real.",
           tags: ["n8n", "AI", "Bots"],
           href: "#services",
         },
         {
-          eyebrow: "Idiomas",
-          title: "Comunicacion multilingue",
+          eyebrow: "Forma de trabajo",
+          title: "Comunicacion tecnica clara",
           description:
-            "Ucraniano nativo, espanol C1, ruso C2 e ingles B1. Comodo en equipos internacionales.",
-          tags: ["UA", "ES", "EN", "RU"],
+            "Explico decisiones, hago las preguntas correctas y mantengo el trabajo tecnico claro para equipos y propietarios de negocio.",
+          tags: ["Claridad", "Equipo", "Ownership"],
           href: "#contact",
         },
       ],
     },
     contact: {
       eyebrow: "Contacto",
-      title: "Abierto a oportunidades full-stack",
+      title: "Disponible para puestos y proyectos tecnicos",
       description:
-        "Estoy abierto a puestos full-stack, oportunidades junior-mid/practicas y proyectos freelance seleccionados donde web, backend, datos, automatizacion o IA aporten valor real.",
+        "Disponible para puestos, colaboraciones y proyectos seleccionados para empresas en desarrollo web, backend, datos, automatizacion, cloud e IA.",
       primaryContact: "Contacto principal",
       telegram: "Escribir en Telegram",
       email: "Enviar email",
@@ -807,34 +811,35 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     experience: {
       eyebrow: "Досвід",
-      title: "Готовий до команди, не тільки до проєктів",
+      title: "Від коду до production: досвід, який вирішує проблеми",
       description:
-        "Мій профіль поєднує full-stack розробку, production IT support, бази даних, cloud та автоматизацію.",
+        "Я поєдную розробку, дані, автоматизацію та production-системи: створюю корисні інструменти, вирішую реальні інциденти й допомагаю технічній роботі рухатися швидше.",
       items: [
         {
           company: "OPINATOR",
-          role: "Full-Stack Developer | IT Support Technician",
+          role: "IT Support Technician",
           period: "2026 - дотепер",
           summary:
-            "Щоденна робота з production-системами, підтримкою інфраструктури, debugging, security tasks і development support.",
+            "Практична підтримка production-систем з AWS, Linux, Git, security tasks і developer tooling.",
           points: [
-            "Керування та міграція AWS EC2 virtual machines, включно з конфігурацією та production maintenance.",
-            "Робота в Linux terminal environments з Git для version control і change management.",
-            "Діагностика configuration issues та technical incidents через пошук root cause.",
-            "Підтримка cybersecurity tasks: log monitoring, IAM/access management, patches та security updates.",
+            "Керування та міграція AWS EC2 virtual machines, включно з configuration of instances та infrastructure maintenance у production.",
+            "Щоденна робота в Linux terminal environments з Git для version control і change management.",
+            "Діагностика та виправлення configuration errors і technical incidents через пошук root cause та зменшення operational impact.",
+            "Участь у cybersecurity tasks: log та incident monitoring, access/IAM management, patches і security updates.",
+            "Використання Claude Code у terminal для прискорення development і technical support tasks.",
           ],
-          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Security"],
+          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Claude Code"],
         },
         {
           company: "Alenta",
           role: "Database Developer and Digital Support Intern",
           period: "2026",
           summary:
-            "Підтримка баз даних і внутрішніх інструментів для оптимізації бізнес-процесів.",
+            "Підтримка баз даних і внутрішніх процесів, щоб бізнес-дані були зрозумілішими й кориснішими.",
           points: [
-            "Підтримка corporate databases у Microsoft Access.",
-            "Створення queries, forms і reports для внутрішніх процесів.",
-            "Структурування business data для покращення operational efficiency.",
+            "Керування та підтримка corporate databases у Microsoft Access.",
+            "Створення queries, forms і reports для оптимізації internal workflows.",
+            "Організація та структурування business data для покращення operational efficiency.",
           ],
           tags: ["Microsoft Access", "Databases", "Reports"],
         },
@@ -843,11 +848,12 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           role: "Automation and Web Developer Intern",
           period: "2025",
           summary:
-            "Web, database і automation support для повторюваних внутрішніх процесів.",
+            "Web, database і automation work для скорочення repetitive tasks та впорядкування internal processes.",
           points: [
-            "Створення та керування MySQL tables і SQL queries.",
+            "Розробка та керування MySQL databases через створення tables і SQL queries.",
             "Автоматизація internal processes з Power Automate.",
-            "Налаштування WordPress sites і оптимізація repetitive data tasks.",
+            "Створення та налаштування WordPress websites.",
+            "Оптимізація repetitive tasks related to data processing.",
           ],
           tags: ["MySQL", "Power Automate", "WordPress", "SQL"],
         },
@@ -857,7 +863,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Навички",
       title: "Full-stack capabilities",
       description:
-        "Зони, де я можу бути корисним у продуктовій команді або на вибраних freelance-проєктах.",
+        "Зони, де я можу бути корисним продуктовим командам, компаніям і вибраним технічним проєктам.",
       items: [
         {
           id: "frontend",
@@ -919,9 +925,9 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     about: {
       eyebrow: "Про мене",
-      title: "Full-stack, який швидко адаптується",
+      title: "Поєдную продукт, код і операційну частину",
       description:
-        "Маю освіту в software engineering і практичний досвід у web development, backend systems, databases, automation та AI integrations. Мені подобається будувати complete products, але я також розумію operational side: debugging, deployments, infrastructure, security updates і роботу з existing systems.",
+        "Працюю з web development, backend, databases, automation, cloud та AI integrations. Моя цінність не тільки в написанні коду, а в розумінні всього технічного потоку: від user-facing feature до systems, data та infrastructure за нею.",
       stackLabel: "Стек",
       stack: [
         "Angular",
@@ -942,43 +948,43 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       cards: [
         {
           eyebrow: "Профіль",
-          title: "Full-stack product builder",
+          title: "End-to-end мислення",
           description:
-            "Можу рухатись від UI до API та database, зберігаючи цілісне розуміння feature.",
+            "Можу рухатись від interface до API, database і deployment, не втрачаючи ціль functionality.",
           tags: ["Frontend", "Backend", "Database"],
           href: "#projects",
         },
         {
           eyebrow: "Сильна сторона",
-          title: "Production mindset",
+          title: "Досвід з реальними системами",
           description:
-            "Практичний досвід з Linux, AWS, logs, IAM, incident diagnosis та security updates.",
+            "Практична робота з Linux, AWS, logs, IAM, incident diagnosis, updates і existing production environments.",
           tags: ["AWS", "Linux", "Support"],
           href: "#experience",
         },
         {
           eyebrow: "Додатково",
-          title: "Automation and AI",
+          title: "Automation з реальним ефектом",
           description:
-            "Використовую automation та AI для reporting, support, internal workflows і assistants.",
+            "Використовую automation та AI для reporting, support, internal workflows і assistants, коли це реально економить час.",
           tags: ["n8n", "AI", "Bots"],
           href: "#services",
         },
         {
-          eyebrow: "Мови",
-          title: "Multilingual communicator",
+          eyebrow: "Підхід до роботи",
+          title: "Зрозуміла технічна комунікація",
           description:
-            "Українська native, іспанська C1, російська C2, англійська B1. Комфортно в міжнародних командах.",
-          tags: ["UA", "ES", "EN", "RU"],
+            "Пояснюю рішення, ставлю правильні питання й тримаю технічну роботу зрозумілою для команд і власників бізнесу.",
+          tags: ["Clarity", "Teamwork", "Ownership"],
           href: "#contact",
         },
       ],
     },
     contact: {
       eyebrow: "Контакти",
-      title: "Відкритий до full-stack можливостей",
+      title: "Доступний для ролей і технічних проєктів",
       description:
-        "Я відкритий до full-stack developer roles, junior-mid/internship opportunities і вибраних freelance-проєктів, де web, backend, data, automation або AI дають реальну користь.",
+        "Доступний для ролей, співпраці та вибраних бізнес-проєктів у web development, backend, data, automation, cloud та AI.",
       primaryContact: "Основний контакт",
       telegram: "Написати в Telegram",
       email: "Написати на email",

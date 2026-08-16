@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
+import { type MouseEvent } from "react";
 
 import { useLocale } from "@/components/LocaleProvider";
 import { owner } from "@/data/site";
@@ -8,9 +9,15 @@ import { owner } from "@/data/site";
 export function Logo() {
   const { copy } = useLocale();
 
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <Link
       href="#top"
+      onClick={handleClick}
       className="inline-flex items-center gap-3 text-white"
       aria-label={copy.accessibility.home}
     >
