@@ -1,6 +1,6 @@
 "use client";
 
-import { type PointerEvent } from "react";
+import { type KeyboardEvent, type PointerEvent } from "react";
 
 import { Tag } from "@/components/common/Tag";
 import { ProjectPreview } from "@/components/projects/ProjectPreview";
@@ -14,12 +14,14 @@ type ProjectCardProps = {
     menu: string;
     viewProject: string;
   };
+  onOpen: (project: Project) => void;
 };
 
 export function ProjectCard({
   project,
   detailsLabel,
   previewLabels,
+  onOpen,
 }: ProjectCardProps) {
   const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
     const card = event.currentTarget;
@@ -48,6 +50,17 @@ export function ProjectCard({
     card.style.setProperty("--card-glow-opacity", "0");
   };
 
+  const openProject = () => {
+    onOpen(project);
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openProject();
+    }
+  };
+
   const action = (
     <div className="mt-7 flex cursor-pointer items-center justify-between border-t border-white/10 pt-5">
       <span className="text-base font-bold text-slate-300 transition group-hover:text-white">
@@ -63,7 +76,12 @@ export function ProjectCard({
     <article
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
-      className="project-card group relative isolate overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-4"
+      onClick={openProject}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label={`${detailsLabel}: ${project.title}`}
+      className="project-card group relative isolate cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-4 focus:outline-none focus-visible:border-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70"
     >
       <div className="project-card-content">
         <ProjectPreview project={project} labels={previewLabels} />
@@ -84,13 +102,7 @@ export function ProjectCard({
               <Tag key={tag}>{tag}</Tag>
             ))}
           </div>
-          {project.href ? (
-            <a href={project.href} target="_blank" rel="noreferrer">
-              {action}
-            </a>
-          ) : (
-            action
-          )}
+          {action}
         </div>
       </div>
     </article>

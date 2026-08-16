@@ -7,12 +7,14 @@ import { Reveal } from "@/components/common/Reveal";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { useLocale } from "@/components/LocaleProvider";
 import { ProjectCard } from "@/components/projects/ProjectCard";
+import { ProjectCaseModal } from "@/components/projects/ProjectCaseModal";
 import { cn } from "@/lib/utils";
-import type { ProjectCategory } from "@/types/portfolio";
+import type { Project, ProjectCategory } from "@/types/portfolio";
 
 export function ProjectsSection() {
   const { copy } = useLocale();
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const visibleProjects = useMemo(() => {
     if (activeCategory === "all") {
@@ -67,6 +69,7 @@ export function ProjectsSection() {
               <ProjectCard
                 project={project}
                 detailsLabel={copy.cta.details}
+                onOpen={setSelectedProject}
                 previewLabels={{
                   case: copy.cta.previewCase,
                   menu: copy.cta.previewMenu,
@@ -77,6 +80,24 @@ export function ProjectsSection() {
           ))}
         </div>
       </Container>
+      {selectedProject ? (
+        <ProjectCaseModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+          labels={{
+            screenshots: copy.cta.screenshots,
+            overview: copy.cta.overview,
+            focus: copy.cta.focus,
+            stack: copy.cta.stack,
+            highlights: copy.cta.highlights,
+            openOriginal: copy.cta.openOriginal,
+            closeCase: copy.cta.closeCase,
+            previewCase: copy.cta.previewCase,
+            previewMenu: copy.cta.previewMenu,
+            viewProject: copy.cta.viewProject,
+          }}
+        />
+      ) : null}
     </section>
   );
 }

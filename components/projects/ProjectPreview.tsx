@@ -1,3 +1,6 @@
+import Image from "next/image";
+
+import rentAutoHome from "@/app/images/rentAuto/home.png";
 import type { Project } from "@/types/portfolio";
 
 type ProjectPreviewProps = {
@@ -7,9 +10,16 @@ type ProjectPreviewProps = {
     menu: string;
     viewProject: string;
   };
+  actionHref?: string;
+  caseHero?: boolean;
 };
 
-export function ProjectPreview({ project, labels }: ProjectPreviewProps) {
+export function ProjectPreview({
+  project,
+  labels,
+  actionHref,
+  caseHero = false,
+}: ProjectPreviewProps) {
   const previewButtonClassName =
     "mt-4 inline-flex min-h-10 cursor-pointer select-none items-center justify-center rounded-full border border-white/75 bg-white px-5 text-xs font-extrabold text-slate-950 shadow-lg shadow-black/25 transition hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-blue-950/25";
 
@@ -58,6 +68,52 @@ export function ProjectPreview({ project, labels }: ProjectPreviewProps) {
     );
   }
 
+  if (project.slug === "rentauto") {
+    return (
+      <div className="relative h-44 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-56">
+        <Image
+          src={rentAutoHome}
+          alt="RentAuto home page"
+          fill
+          priority
+          sizes={
+            caseHero
+              ? "(min-width: 1024px) 792px, calc(100vw - 5rem)"
+              : "(min-width: 1024px) 420px, calc(100vw - 4rem)"
+          }
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-950/15 to-slate-950/65" />
+        <div className="absolute inset-x-5 top-5 flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-slate-200/80">
+          <span>{labels.case}</span>
+          <span>{labels.menu}</span>
+        </div>
+        <div className="absolute inset-0 grid place-items-center px-6 text-center">
+          <div>
+            {caseHero ? null : (
+              <p className="mx-auto w-fit rounded-full border border-white/15 bg-slate-950/70 px-4 py-2 text-sm font-black text-white shadow-xl shadow-black/35 backdrop-blur-md sm:text-base">
+                {project.previewLabel}
+              </p>
+            )}
+            {actionHref ? (
+              <a
+                href={actionHref}
+                target="_blank"
+                rel="noreferrer"
+                className={previewButtonClassName}
+              >
+                {labels.viewProject}
+                <span className="ml-2">↗</span>
+              </a>
+            ) : (
+              <span className={previewButtonClassName}>{labels.viewProject}</span>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative h-44 overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.25),transparent_30%),linear-gradient(135deg,#171717,#0f172a)] p-5 sm:h-56">
       <div className="absolute inset-x-5 top-5 flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-slate-400">
@@ -69,14 +125,15 @@ export function ProjectPreview({ project, labels }: ProjectPreviewProps) {
           <p className="font-serif text-2xl font-semibold text-white sm:text-3xl">
             {project.previewLabel}
           </p>
-          {project.href ? (
+          {actionHref ? (
             <a
-              href={project.href}
+              href={actionHref}
               target="_blank"
               rel="noreferrer"
               className={previewButtonClassName}
             >
               {labels.viewProject}
+              <span className="ml-2">↗</span>
             </a>
           ) : (
             <span className={previewButtonClassName}>{labels.viewProject}</span>

@@ -90,6 +90,13 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       scroll: "Scroll down",
       previewCase: "Case",
       previewMenu: "Menu",
+      screenshots: "Screenshots",
+      overview: "Overview",
+      focus: "Technical focus",
+      stack: "Stack",
+      highlights: "What I built",
+      openOriginal: "Open original site",
+      closeCase: "Close case",
     },
     hero: {
       role: "Full-stack developer",
@@ -120,18 +127,69 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           status: "Live",
           summary:
             "A scalable vehicle rental platform with availability validation, JWT authentication, RBAC, Stripe payments, admin metrics, n8n reports, and an AI booking assistant.",
+          caseStudy: {
+            type: "Full-stack rental platform",
+            overview:
+              "Course project: a full-stack vehicle rental platform built with a modern architecture focused on scalability, security, and user experience. The application combines vehicle browsing, reservations, online payments, protected admin workflows, automation, and AI support in one complete product.",
+            focus:
+              "End-to-end product architecture: Angular UI, NestJS API, PostgreSQL data model, TypeORM entities, JWT authentication, RBAC permissions, Stripe payments, admin metrics, n8n reporting, and AI assistant flows.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "Stripe", "n8n"],
+            highlights: [
+              "Complete reservation system with availability validation and protected user flows.",
+              "Online payments with Stripe and JWT authentication with role-based access control.",
+              "Admin panel with business metrics, automatic n8n reports, AI booking assistant, and private Telegram admin chat with real-time analysis.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/rentauto-home.png",
+                alt: "RentAuto home page",
+              },
+              {
+                src: "/projects/rentauto-admin.png",
+                alt: "RentAuto admin dashboard",
+              },
+            ],
+          },
         },
         {
           ...sharedProjects.chat,
           categoryLabel: "Restaurant AI agent",
           summary:
             "An AI assistant that answers customer questions, manages bookings, and works from an easy-to-update knowledge base.",
+          caseStudy: {
+            type: "AI customer support system",
+            overview:
+              "AI assistant concept for restaurant support, focused on answering customer questions from a maintained knowledge base and helping with booking-related intent.",
+            focus:
+              "Assistant architecture with a maintainable knowledge base, backend conversation flow, booking intent logic, and integration points for restaurant operations.",
+            stack: ["Node.js", "Supabase", "Google Drive", "RAG", "API integrations"],
+            highlights: [
+              "Knowledge-base structure that non-technical users can update.",
+              "Conversation flow for FAQs, availability, and booking intent.",
+              "Backend-ready architecture for connecting restaurant data and AI responses.",
+            ],
+            screenshots: [],
+          },
         },
         {
           ...sharedProjects.ads,
           categoryLabel: "AI reporting bot",
           summary:
             "A bot that analyzes ad campaigns, leads, and partner data, then creates reports with practical recommendations.",
+          caseStudy: {
+            type: "Automation and AI reporting",
+            overview:
+              "Automation concept for campaign reporting: a Telegram-first bot that structures marketing data, requests AI analysis, and turns it into practical team recommendations.",
+            focus:
+              "Automation workflow covering bot commands, data handoff, AI analysis structure, and Notion-style output for repeatable campaign reviews.",
+            stack: ["Python", "Claude AI", "Telegram Bot API", "Notion", "Automation"],
+            highlights: [
+              "Telegram-first workflow for quick reporting requests.",
+              "AI-generated campaign observations with actionable next steps.",
+              "Structured output designed for team review and follow-up.",
+            ],
+            screenshots: [],
+          },
         },
       ],
     },
@@ -338,6 +396,13 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       scroll: "Desplazate abajo",
       previewCase: "Caso",
       previewMenu: "Menu",
+      screenshots: "Capturas",
+      overview: "Resumen",
+      focus: "Enfoque tecnico",
+      stack: "Stack",
+      highlights: "Que construí",
+      openOriginal: "Abrir sitio original",
+      closeCase: "Cerrar caso",
     },
     hero: {
       role: "Desarrollador full-stack",
@@ -368,18 +433,69 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           status: "Live",
           summary:
             "Plataforma escalable de alquiler de vehiculos con validacion de disponibilidad, JWT, RBAC, pagos Stripe, metricas admin, informes n8n y asistente IA.",
+          caseStudy: {
+            type: "Plataforma full-stack de alquiler",
+            overview:
+              "Proyecto de fin de curso: plataforma full-stack de alquiler de vehiculos con arquitectura moderna orientada a escalabilidad, seguridad y experiencia de usuario. La aplicacion combina catalogo de vehiculos, reservas, pagos online, flujos admin protegidos, automatizacion y soporte con IA en un producto completo.",
+            focus:
+              "Arquitectura end to end del producto: UI en Angular, API con NestJS, modelo PostgreSQL, entidades TypeORM, autenticacion JWT, permisos RBAC, pagos Stripe, metricas admin, informes n8n y flujos de asistente IA.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "Stripe", "n8n"],
+            highlights: [
+              "Sistema completo de reservas con validacion de disponibilidad y flujos de usuario protegidos.",
+              "Pagos online con Stripe y autenticacion JWT con control de acceso por roles.",
+              "Panel administrativo con metricas de negocio, informes automaticos via n8n, asistente IA y chat privado en Telegram con analisis en tiempo real para el administrador.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/rentauto-home.png",
+                alt: "Pagina principal de RentAuto",
+              },
+              {
+                src: "/projects/rentauto-admin.png",
+                alt: "Panel administrativo de RentAuto",
+              },
+            ],
+          },
         },
         {
           ...sharedProjects.chat,
           categoryLabel: "Agente IA para restaurante",
           summary:
             "Asistente IA que responde preguntas, gestiona reservas y trabaja desde una base de conocimiento facil de actualizar.",
+          caseStudy: {
+            type: "Sistema IA de atencion al cliente",
+            overview:
+              "Concepto de asistente IA para soporte de restaurante, centrado en responder desde una base de conocimiento mantenible y ayudar con intenciones de reserva.",
+            focus:
+              "Arquitectura de asistente con base de conocimiento mantenible, flujo backend de conversacion, logica de reserva e integraciones para operacion de restaurante.",
+            stack: ["Node.js", "Supabase", "Google Drive", "RAG", "API integrations"],
+            highlights: [
+              "Base de conocimiento facil de actualizar por usuarios no tecnicos.",
+              "Flujo conversacional para FAQs, disponibilidad e intencion de reserva.",
+              "Arquitectura preparada para conectar datos del restaurante y respuestas IA.",
+            ],
+            screenshots: [],
+          },
         },
         {
           ...sharedProjects.ads,
           categoryLabel: "Bot de reporting IA",
           summary:
             "Bot que analiza campanas, leads y datos de socios, y crea informes con recomendaciones practicas.",
+          caseStudy: {
+            type: "Automatizacion y reporting IA",
+            overview:
+              "Concepto de automatizacion para reporting de campanas: un bot orientado a Telegram que estructura datos de marketing, solicita analisis IA y genera recomendaciones practicas.",
+            focus:
+              "Workflow de automatizacion con comandos del bot, entrega de datos, estructura de analisis IA y salida tipo Notion para revisiones repetibles.",
+            stack: ["Python", "Claude AI", "Telegram Bot API", "Notion", "Automation"],
+            highlights: [
+              "Workflow en Telegram para pedir informes rapido.",
+              "Observaciones generadas por IA con siguientes pasos accionables.",
+              "Salida estructurada para revision y seguimiento del equipo.",
+            ],
+            screenshots: [],
+          },
         },
       ],
     },
@@ -586,6 +702,13 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       scroll: "Гортайте вниз",
       previewCase: "Кейс",
       previewMenu: "Меню",
+      screenshots: "Скріншоти",
+      overview: "Опис",
+      focus: "Технічний фокус",
+      stack: "Стек",
+      highlights: "Що я зробив",
+      openOriginal: "Відкрити оригінальний сайт",
+      closeCase: "Закрити кейс",
     },
     hero: {
       role: "Full-stack розробник",
@@ -616,18 +739,69 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           status: "Live",
           summary:
             "Масштабована платформа оренди авто з перевіркою доступності, JWT, RBAC, оплатами Stripe, admin-метриками, n8n-звітами та AI-асистентом.",
+          caseStudy: {
+            type: "Full-stack платформа оренди",
+            overview:
+              "Курсовий full-stack проєкт: платформа оренди авто з сучасною архітектурою, орієнтованою на масштабованість, безпеку та user experience. Застосунок об'єднує каталог авто, бронювання, онлайн-оплати, захищені admin workflows, автоматизацію та AI-підтримку в один цілісний продукт.",
+            focus:
+              "End-to-end архітектура продукту: Angular UI, NestJS API, PostgreSQL data model, TypeORM entities, JWT authentication, RBAC permissions, Stripe payments, admin metrics, n8n reporting і AI assistant flows.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "Stripe", "n8n"],
+            highlights: [
+              "Повна система бронювання з перевіркою доступності та захищеними user flows.",
+              "Онлайн-оплати через Stripe і JWT authentication з role-based access control.",
+              "Admin panel з бізнес-метриками, автоматичними n8n-звітами, AI-асистентом і приватним Telegram-чатом для адміністратора з real-time analysis.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/rentauto-home.png",
+                alt: "Головна сторінка RentAuto",
+              },
+              {
+                src: "/projects/rentauto-admin.png",
+                alt: "Адмін-панель RentAuto",
+              },
+            ],
+          },
         },
         {
           ...sharedProjects.chat,
           categoryLabel: "AI-агент для ресторану",
           summary:
             "AI-асистент відповідає на питання, допомагає з бронюваннями та працює з базою знань, яку легко оновлювати.",
+          caseStudy: {
+            type: "AI customer support system",
+            overview:
+              "Концепт AI-асистента для підтримки ресторану: відповіді з підтримуваної бази знань і допомога з booking intent.",
+            focus:
+              "Архітектура асистента з підтримуваною knowledge base, backend conversation flow, booking intent logic та integration points для ресторанних операцій.",
+            stack: ["Node.js", "Supabase", "Google Drive", "RAG", "API integrations"],
+            highlights: [
+              "Knowledge base, яку можуть оновлювати не технічні користувачі.",
+              "Conversation flow для FAQs, availability і booking intent.",
+              "Backend-ready architecture для підключення restaurant data та AI responses.",
+            ],
+            screenshots: [],
+          },
         },
         {
           ...sharedProjects.ads,
           categoryLabel: "AI-бот для звітів",
           summary:
             "Бот аналізує рекламу, ліди й партнерські дані, а потім створює звіти з практичними рекомендаціями.",
+          caseStudy: {
+            type: "Automation and AI reporting",
+            overview:
+              "Концепт автоматизації для campaign reporting: Telegram-first бот структурує marketing data, запускає AI-аналіз і перетворює його на практичні рекомендації для команди.",
+            focus:
+              "Automation workflow з bot commands, data handoff, AI analysis structure і Notion-style output для повторюваних campaign reviews.",
+            stack: ["Python", "Claude AI", "Telegram Bot API", "Notion", "Automation"],
+            highlights: [
+              "Telegram-first workflow для швидких reporting requests.",
+              "AI-generated campaign observations з actionable next steps.",
+              "Структурований output для team review і follow-up.",
+            ],
+            screenshots: [],
+          },
         },
       ],
     },

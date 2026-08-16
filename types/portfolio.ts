@@ -26,6 +26,17 @@ export type Project = {
   previewLabel: string;
   nodes?: string[];
   href?: string;
+  caseStudy: {
+    type: string;
+    overview: string;
+    focus: string;
+    stack: string[];
+    highlights: string[];
+    screenshots: Array<{
+      src: string;
+      alt: string;
+    }>;
+  };
 };
 
 export type ExperienceItem = {
@@ -66,6 +77,13 @@ export type SiteCopy = {
     scroll: string;
     previewCase: string;
     previewMenu: string;
+    screenshots: string;
+    overview: string;
+    focus: string;
+    stack: string;
+    highlights: string;
+    openOriginal: string;
+    closeCase: string;
   };
   hero: {
     role: string;
