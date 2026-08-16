@@ -27,6 +27,18 @@ export function SiteHeader() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
+            <select
+              className="h-10 rounded-full border border-white/10 bg-white/[0.04] px-3 text-sm font-bold uppercase text-slate-200 outline-none sm:hidden"
+              value={locale}
+              onChange={(event) => setLocale(event.target.value as typeof locale)}
+              aria-label={copy.accessibility.languageSwitcher}
+            >
+              {locales.map((item) => (
+                <option key={item} value={item}>
+                  {localeLabels[item]}
+                </option>
+              ))}
+            </select>
             <div
               className="hidden rounded-full border border-white/10 bg-white/[0.04] p-1 sm:flex"
               aria-label={copy.accessibility.languageSwitcher}
@@ -52,7 +64,7 @@ export function SiteHeader() {
               href="#contact"
               className="hidden min-h-11 px-5 text-sm sm:inline-flex"
             >
-              {copy.cta.discuss}
+              {copy.cta.hire}
             </ButtonLink>
           </div>
         </div>

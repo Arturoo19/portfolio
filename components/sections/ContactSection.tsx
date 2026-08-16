@@ -11,8 +11,8 @@ export function ContactSection() {
   const { copy } = useLocale();
 
   return (
-    <section id="contact" className="py-24 sm:py-32">
-      <Container>
+    <section id="contact" className="flow-stage relative overflow-hidden py-16 sm:py-32">
+      <Container className="relative z-10">
         <Reveal>
           <div className="rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_82%_20%,rgba(59,130,246,0.24),transparent_30%),rgba(15,23,42,0.72)] p-8 shadow-2xl shadow-blue-950/20 sm:p-12 lg:p-16">
           <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-end">
@@ -37,7 +37,19 @@ export function ContactSection() {
                 rel="noreferrer"
                 className="mt-4 block text-2xl font-bold text-white hover:text-blue-300"
               >
-                @username
+                {owner.telegramUsername}
+              </a>
+              <a
+                href={`mailto:${owner.email}`}
+                className="mt-3 block text-base font-semibold text-slate-400 hover:text-blue-300"
+              >
+                {owner.email}
+              </a>
+              <a
+                href={`tel:${owner.phone.replaceAll(" ", "")}`}
+                className="mt-2 block text-base font-semibold text-slate-400 hover:text-blue-300"
+              >
+                {owner.phone}
               </a>
               <div className="mt-8 flex flex-col gap-3">
                 <ButtonLink href={owner.telegram}>{copy.contact.telegram}</ButtonLink>

@@ -10,8 +10,8 @@ export function SiteFooter() {
   const { copy } = useLocale();
 
   return (
-    <footer className="border-t border-white/10 py-10">
-      <Container>
+    <footer className="site-footer border-t border-white/10 py-10">
+      <Container className="relative z-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <Logo />
           <nav className="flex flex-wrap gap-5 text-sm font-semibold text-slate-400">

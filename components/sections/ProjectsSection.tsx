@@ -23,8 +23,11 @@ export function ProjectsSection() {
   }, [activeCategory, copy.projects.items]);
 
   return (
-    <section id="projects" className="py-24 sm:py-32">
-      <Container>
+    <section
+      id="projects"
+      className="projects-stage relative overflow-hidden py-16 sm:py-32"
+    >
+      <Container className="relative z-10">
         <Reveal>
           <SectionHeading
             eyebrow={copy.projects.eyebrow}

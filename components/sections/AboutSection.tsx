@@ -12,8 +12,8 @@ export function AboutSection() {
   const { copy } = useLocale();
 
   return (
-    <section id="about" className="py-24 sm:py-32">
-      <Container>
+    <section id="about" className="flow-stage relative overflow-hidden py-16 sm:py-32">
+      <Container className="relative z-10">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <Reveal>
@@ -39,7 +39,7 @@ export function AboutSection() {
               <Reveal key={card.title} delay={80 * index}>
                 <Link
                   href={card.href}
-                  className="group flex min-h-72 flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition hover:border-blue-400/50 hover:bg-slate-900"
+                  className="group flex min-h-56 flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition hover:border-blue-400/50 hover:bg-slate-900 sm:min-h-72"
                 >
                   <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-400">
                     {card.eyebrow}

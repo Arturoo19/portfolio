@@ -25,6 +25,16 @@ export type Project = {
   preview: "website" | "chat" | "workflow";
   previewLabel: string;
   nodes?: string[];
+  href?: string;
+};
+
+export type ExperienceItem = {
+  company: string;
+  role: string;
+  period: string;
+  summary: string;
+  points: string[];
+  tags: string[];
 };
 
 export type Service = {
@@ -48,6 +58,8 @@ export type SiteCopy = {
   navigation: NavItem[];
   cta: {
     discuss: string;
+    hire: string;
+    cv: string;
     viewWork: string;
     viewProject: string;
     details: string;
@@ -70,6 +82,12 @@ export type SiteCopy = {
       label: string;
     }>;
     items: Project[];
+  };
+  experience: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: ExperienceItem[];
   };
   services: {
     eyebrow: string;

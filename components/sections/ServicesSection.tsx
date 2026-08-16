@@ -10,8 +10,8 @@ export function ServicesSection() {
   const { copy } = useLocale();
 
   return (
-    <section id="services" className="py-24 sm:py-32">
-      <Container>
+    <section id="services" className="flow-stage relative overflow-hidden py-16 sm:py-32">
+      <Container className="relative z-10">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <SectionHeading
