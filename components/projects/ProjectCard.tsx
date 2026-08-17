@@ -65,7 +65,7 @@ export function ProjectCard({
   };
 
   const action = (
-    <div className="mt-5 flex cursor-pointer items-center justify-between border-t border-white/10 pt-4">
+    <div className="mt-auto flex cursor-pointer items-center justify-between border-t border-white/10 pt-4">
       <span className="text-sm font-bold text-slate-300 transition group-hover:text-white">
         {detailsLabel}
       </span>
@@ -84,11 +84,11 @@ export function ProjectCard({
       role="button"
       tabIndex={0}
       aria-label={`${detailsLabel}: ${project.title}`}
-      className="project-card group relative isolate cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-3 focus:outline-none focus-visible:border-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70"
+      className="project-card group relative isolate h-full cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-3 focus:outline-none focus-visible:border-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70"
     >
-      <div className="project-card-content">
+      <div className="project-card-content flex h-full flex-col">
         <ProjectPreview project={project} labels={previewLabels} />
-        <div className="px-2 pb-1 pt-5">
+        <div className="flex flex-1 flex-col px-2 pb-1 pt-5">
           <div className="mb-3 flex items-start justify-between gap-4">
             <h3 className="font-serif text-xl font-semibold text-white sm:text-2xl">
               {project.title}
@@ -100,7 +100,7 @@ export function ProjectCard({
           <p className="line-clamp-3 text-sm font-semibold leading-6 text-slate-400 sm:text-base">
             {project.summary}
           </p>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 flex min-h-20 content-start flex-wrap gap-2">
             {visibleTags.map((tag) => (
               <Tag key={tag}>{tag}</Tag>
             ))}

@@ -22,14 +22,14 @@ export const localeLabels: Record<Locale, string> = {
 };
 
 export const socialLinks: SocialLink[] = [
-  { label: "Telegram", href: owner.telegram, icon: "TG" },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/artur-azizbekov",
+    href: "https://www.linkedin.com/in/artur-azizbekov-342134399/",
     icon: "IN",
   },
   { label: "GitHub", href: "https://github.com/Arturoo19", icon: "GH" },
   { label: "Email", href: `mailto:${owner.email}`, icon: "ML" },
+  { label: "Telegram", href: owner.telegram, icon: "TG" },
 ];
 
 const sharedProjects = {
@@ -59,15 +59,15 @@ const sharedProjects = {
     preview: "chat" as const,
     previewLabel: "Restaurant AI agent",
   },
-  ads: {
-    slug: "meta-ads-analyzer-bot",
-    title: "Meta Ads Analyzer Bot",
+  girex: {
+    slug: "girex-support-agent",
+    title: "Girex Support Agent",
     year: "2026",
-    category: "automation" as const,
-    tags: ["Python", "Claude AI", "Telegram Bot API", "Notion"],
+    category: "ai" as const,
+    tags: ["n8n", "Telegram Bot API", "AI Agent", "PostgreSQL", "Ticketing"],
     preview: "workflow" as const,
-    previewLabel: "AI ads audit bot",
-    nodes: ["Metrics", "Claude", "Notion"],
+    previewLabel: "Telegram support agent",
+    nodes: ["Telegram", "AI", "Support"],
   },
 };
 
@@ -94,7 +94,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       overview: "Overview",
       focus: "Technical focus",
       stack: "Stack",
-      highlights: "What I built",
+      highlights: "Key features",
       openOriginal: "Open original site",
       closeCase: "Close case",
     },
@@ -126,18 +126,18 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           categoryLabel: "Full-stack rental platform",
           status: "Live",
           summary:
-            "A scalable vehicle rental platform with availability validation, JWT authentication, RBAC, Stripe payments, admin metrics, n8n reports, and an AI booking assistant.",
+            "A digital vehicle rental platform with catalog filters, availability checks, bookings, Stripe payments, admin tools, analytics, and AI/n8n automations.",
           caseStudy: {
             type: "Full-stack rental platform",
             overview:
-              "Course project: a full-stack vehicle rental platform built with a modern architecture focused on scalability, security, and user experience. The application combines vehicle browsing, reservations, online payments, protected admin workflows, automation, and AI support in one complete product.",
+              "RentAuto is an intelligent full-stack web platform for managing vehicle rental online. It centralizes the customer journey from browsing and filtering cars to checking availability, calculating the final rental price, creating reservations, paying online, and reviewing personal booking history. The product also includes a protected admin area for managing the fleet, reviewing reservations, and analyzing business activity.",
             focus:
-              "End-to-end product architecture: Angular UI, NestJS API, PostgreSQL data model, TypeORM entities, JWT authentication, RBAC permissions, Stripe payments, admin metrics, n8n reporting, and AI assistant flows.",
-            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "Stripe", "n8n"],
+              "Layered architecture with Angular for the user interface, NestJS for the REST API and business logic, PostgreSQL with TypeORM for users, cars and rentals, JWT and bcrypt for authentication, guards and role-based access for protected routes, Stripe for payments, Docker-ready deployment, and n8n/AI automations connected to Telegram, email, Stripe and the database.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
             highlights: [
-              "Complete reservation system with availability validation and protected user flows.",
-              "Online payments with Stripe and JWT authentication with role-based access control.",
-              "Admin panel with business metrics, automatic n8n reports, AI booking assistant, and private Telegram admin chat with real-time analysis.",
+              "Customer flow with registration, login, vehicle catalog, filters by dates, city, category and price, reservation history, availability validation and automatic price calculation.",
+              "Admin dashboard with fleet management, protected administrative actions, reservation control, income metrics, new users, active cars, cancellations and most profitable vehicles.",
+              "Automation layer with web AI assistant, daily and weekly Telegram reports, admin Telegram bot for quick statistics, data-based recommendations, and recovery emails for unfinished payments.",
             ],
             screenshots: [
               {
@@ -147,6 +147,40 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               {
                 src: "/projects/rentauto-admin.png",
                 alt: "RentAuto admin dashboard",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.girex,
+          categoryLabel: "AI support automation",
+          status: "Client request",
+          summary:
+            "Telegram AI support bot for Girex that classifies requests, answers from a knowledge base, escalates urgent cases, alerts the admin team, and creates tickets.",
+          caseStudy: {
+            type: "Telegram AI support and ticketing",
+            overview:
+              "Girex Support Agent is an AI support solution developed for Girex as a client request focused on automating the first line of support in Telegram. The system classifies requests, answers from a knowledge base, and creates structured tickets when a case needs follow-up. For urgent, financial, compliance, or security issues, the bot notifies the team in a private admin group and escalates the conversation to human support.",
+            focus:
+              "n8n workflow connecting Telegram Bot API, an AI agent, knowledge-base logic, PostgreSQL conversation memory, ticket creation, human escalation, admin group notifications, and safety rules so the bot avoids risky financial or legal promises and hands off doubtful cases to support.",
+            stack: ["n8n", "Telegram Bot API", "AI Agent", "PostgreSQL", "Google Sheets", "Ticketing", "Escalation"],
+            highlights: [
+              "Request triage for registration, KYC, P2P deals, escrow, deposits/withdrawals, errors, merchants, security, compliance and general questions.",
+              "Ticket flow that stores user ID, email, deal number, screenshots, message description, category, priority and conversation history.",
+              "Human-in-the-loop escalation with admin Telegram alerts for urgent, financial, compliance, security or unclear cases.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/girex-workflow.png",
+                alt: "Girex n8n workflow",
+              },
+              {
+                src: "/projects/girex-admin-alert.png",
+                alt: "Girex admin Telegram alert",
+              },
+              {
+                src: "/projects/girex-bot-chat.png",
+                alt: "Girex support bot conversation",
               },
             ],
           },
@@ -167,26 +201,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               "Knowledge-base structure that non-technical users can update.",
               "Conversation flow for FAQs, availability, and booking intent.",
               "Backend-ready architecture for connecting restaurant data and AI responses.",
-            ],
-            screenshots: [],
-          },
-        },
-        {
-          ...sharedProjects.ads,
-          categoryLabel: "AI reporting bot",
-          summary:
-            "A bot that analyzes ad campaigns, leads, and partner data, then creates reports with practical recommendations.",
-          caseStudy: {
-            type: "Automation and AI reporting",
-            overview:
-              "Automation concept for campaign reporting: a Telegram-first bot that structures marketing data, requests AI analysis, and turns it into practical team recommendations.",
-            focus:
-              "Automation workflow covering bot commands, data handoff, AI analysis structure, and Notion-style output for repeatable campaign reviews.",
-            stack: ["Python", "Claude AI", "Telegram Bot API", "Notion", "Automation"],
-            highlights: [
-              "Telegram-first workflow for quick reporting requests.",
-              "AI-generated campaign observations with actionable next steps.",
-              "Structured output designed for team review and follow-up.",
             ],
             screenshots: [],
           },
@@ -402,7 +416,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       overview: "Resumen",
       focus: "Enfoque tecnico",
       stack: "Stack",
-      highlights: "Que construí",
+      highlights: "Funcionalidades clave",
       openOriginal: "Abrir sitio original",
       closeCase: "Cerrar caso",
     },
@@ -434,18 +448,18 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           categoryLabel: "Plataforma full-stack",
           status: "Live",
           summary:
-            "Plataforma escalable de alquiler de vehiculos con validacion de disponibilidad, JWT, RBAC, pagos Stripe, metricas admin, informes n8n y asistente IA.",
+            "Plataforma digital de alquiler de vehiculos con filtros, disponibilidad, reservas, pagos Stripe, administracion, estadisticas y automatizaciones IA/n8n.",
           caseStudy: {
             type: "Plataforma full-stack de alquiler",
             overview:
-              "Proyecto de fin de curso: plataforma full-stack de alquiler de vehiculos con arquitectura moderna orientada a escalabilidad, seguridad y experiencia de usuario. La aplicacion combina catalogo de vehiculos, reservas, pagos online, flujos admin protegidos, automatizacion y soporte con IA en un producto completo.",
+              "RentAuto es una plataforma web inteligente full-stack para gestionar el alquiler de vehiculos de forma digital. Centraliza el recorrido del cliente: consultar y filtrar coches, comprobar disponibilidad, calcular el precio final, crear reservas, avanzar en el pago online y revisar el historial personal. Tambien incluye una zona de administracion protegida para gestionar la flota, revisar reservas y analizar la actividad del negocio.",
             focus:
-              "Arquitectura end to end del producto: UI en Angular, API con NestJS, modelo PostgreSQL, entidades TypeORM, autenticacion JWT, permisos RBAC, pagos Stripe, metricas admin, informes n8n y flujos de asistente IA.",
-            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "Stripe", "n8n"],
+              "Arquitectura por capas con Angular para la interfaz, NestJS para la API REST y la logica de negocio, PostgreSQL con TypeORM para usuarios, coches y reservas, JWT y bcrypt para autenticacion, guards y control de roles para rutas protegidas, Stripe para pagos, despliegue preparado con Docker y automatizaciones n8n/IA conectadas con Telegram, correo, Stripe y base de datos.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "IA", "Docker"],
             highlights: [
-              "Sistema completo de reservas con validacion de disponibilidad y flujos de usuario protegidos.",
-              "Pagos online con Stripe y autenticacion JWT con control de acceso por roles.",
-              "Panel administrativo con metricas de negocio, informes automaticos via n8n, asistente IA y chat privado en Telegram con analisis en tiempo real para el administrador.",
+              "Flujo de cliente con registro, login, catalogo de vehiculos, filtros por fechas, ciudad, categoria y precio, historial de reservas, validacion de disponibilidad y calculo automatico del precio final.",
+              "Dashboard administrativo con gestion de flota, acciones protegidas, control de reservas, ingresos, nuevos usuarios, coches activos, cancelaciones y vehiculos mas rentables.",
+              "Capa de automatizacion con asistente IA web, informes diarios y semanales en Telegram, bot administrativo para estadisticas rapidas, recomendaciones basadas en datos y correos para recuperar pagos no finalizados.",
             ],
             screenshots: [
               {
@@ -455,6 +469,40 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               {
                 src: "/projects/rentauto-admin.png",
                 alt: "Panel administrativo de RentAuto",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.girex,
+          categoryLabel: "Automatizacion de soporte IA",
+          status: "Pedido de cliente",
+          summary:
+            "Bot IA de soporte para Telegram que clasifica consultas, responde desde la base de conocimiento, escala casos urgentes, avisa al equipo y crea tickets.",
+          caseStudy: {
+            type: "Soporte IA en Telegram y ticketing",
+            overview:
+              "Girex Support Agent es una solucion de soporte IA desarrollada para Girex como un encargo orientado a automatizar la primera linea de atencion en Telegram. El sistema clasifica consultas, responde desde una base de conocimiento y crea tickets estructurados cuando el caso requiere seguimiento. Para incidencias urgentes, financieras, de compliance o seguridad, el bot notifica al equipo en un grupo privado y deriva la conversacion a soporte humano.",
+            focus:
+              "Workflow n8n conectado con Telegram Bot API, agente IA, logica de base de conocimiento, memoria de conversacion en PostgreSQL, creacion de tickets, escalado humano, avisos al grupo de administradores y reglas de seguridad para evitar promesas financieras o legales arriesgadas.",
+            stack: ["n8n", "Telegram Bot API", "AI Agent", "PostgreSQL", "Google Sheets", "Ticketing", "Escalation"],
+            highlights: [
+              "Clasificacion de consultas sobre registro, KYC, operaciones P2P, escrow, depositos/retiros, errores, merchants, seguridad, compliance y preguntas generales.",
+              "Flujo de tickets con user ID, email, numero de operacion, capturas, descripcion, categoria, prioridad e historial de conversacion.",
+              "Escalado human-in-the-loop con alertas en Telegram para casos urgentes, financieros, compliance, seguridad o situaciones poco claras.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/girex-workflow.png",
+                alt: "Workflow n8n de Girex",
+              },
+              {
+                src: "/projects/girex-admin-alert.png",
+                alt: "Alerta de Girex en Telegram para administradores",
+              },
+              {
+                src: "/projects/girex-bot-chat.png",
+                alt: "Conversacion del bot de soporte Girex",
               },
             ],
           },
@@ -475,26 +523,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               "Base de conocimiento facil de actualizar por usuarios no tecnicos.",
               "Flujo conversacional para FAQs, disponibilidad e intencion de reserva.",
               "Arquitectura preparada para conectar datos del restaurante y respuestas IA.",
-            ],
-            screenshots: [],
-          },
-        },
-        {
-          ...sharedProjects.ads,
-          categoryLabel: "Bot de reporting IA",
-          summary:
-            "Bot que analiza campanas, leads y datos de socios, y crea informes con recomendaciones practicas.",
-          caseStudy: {
-            type: "Automatizacion y reporting IA",
-            overview:
-              "Concepto de automatizacion para reporting de campanas: un bot orientado a Telegram que estructura datos de marketing, solicita analisis IA y genera recomendaciones practicas.",
-            focus:
-              "Workflow de automatizacion con comandos del bot, entrega de datos, estructura de analisis IA y salida tipo Notion para revisiones repetibles.",
-            stack: ["Python", "Claude AI", "Telegram Bot API", "Notion", "Automation"],
-            highlights: [
-              "Workflow en Telegram para pedir informes rapido.",
-              "Observaciones generadas por IA con siguientes pasos accionables.",
-              "Salida estructurada para revision y seguimiento del equipo.",
             ],
             screenshots: [],
           },
@@ -710,7 +738,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       overview: "Опис",
       focus: "Технічний фокус",
       stack: "Стек",
-      highlights: "Що я зробив",
+      highlights: "Ключові можливості",
       openOriginal: "Відкрити оригінальний сайт",
       closeCase: "Закрити кейс",
     },
@@ -742,18 +770,18 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           categoryLabel: "Full-stack платформа",
           status: "Live",
           summary:
-            "Масштабована платформа оренди авто з перевіркою доступності, JWT, RBAC, оплатами Stripe, admin-метриками, n8n-звітами та AI-асистентом.",
+            "Digital платформа оренди авто з filters, availability checks, bookings, Stripe payments, admin tools, statistics і AI/n8n automations.",
           caseStudy: {
             type: "Full-stack платформа оренди",
             overview:
-              "Курсовий full-stack проєкт: платформа оренди авто з сучасною архітектурою, орієнтованою на масштабованість, безпеку та user experience. Застосунок об'єднує каталог авто, бронювання, онлайн-оплати, захищені admin workflows, автоматизацію та AI-підтримку в один цілісний продукт.",
+              "RentAuto - це intelligent full-stack web platform для digital management оренди автомобілів. Вона централізує customer journey: browsing і filtering cars, availability check, automatic price calculation, reservations, online payment flow та personal booking history. Також є protected admin area для fleet management, reservation review і business activity analysis.",
             focus:
-              "End-to-end архітектура продукту: Angular UI, NestJS API, PostgreSQL data model, TypeORM entities, JWT authentication, RBAC permissions, Stripe payments, admin metrics, n8n reporting і AI assistant flows.",
-            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "Stripe", "n8n"],
+              "Layered architecture: Angular для user interface, NestJS для REST API і business logic, PostgreSQL з TypeORM для users, cars і rentals, JWT і bcrypt для authentication, guards і role-based access для protected routes, Stripe payments, Docker-ready deployment і n8n/AI automations з Telegram, email, Stripe та database.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
             highlights: [
-              "Повна система бронювання з перевіркою доступності та захищеними user flows.",
-              "Онлайн-оплати через Stripe і JWT authentication з role-based access control.",
-              "Admin panel з бізнес-метриками, автоматичними n8n-звітами, AI-асистентом і приватним Telegram-чатом для адміністратора з real-time analysis.",
+              "Customer flow з registration, login, vehicle catalog, filters by dates, city, category and price, reservation history, availability validation і automatic final price calculation.",
+              "Admin dashboard з fleet management, protected administrative actions, reservation control, income metrics, new users, active cars, cancellations і most profitable vehicles.",
+              "Automation layer з web AI assistant, daily/weekly Telegram reports, admin Telegram bot для quick statistics, data-based recommendations і recovery emails для unfinished payments.",
             ],
             screenshots: [
               {
@@ -763,6 +791,40 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               {
                 src: "/projects/rentauto-admin.png",
                 alt: "Адмін-панель RentAuto",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.girex,
+          categoryLabel: "AI support automation",
+          status: "Client request",
+          summary:
+            "Telegram AI support bot для Girex: класифікує звернення, відповідає з бази знань, ескалує urgent cases, сповіщає команду і створює tickets.",
+          caseStudy: {
+            type: "Telegram AI support and ticketing",
+            overview:
+              "Girex Support Agent - це AI support solution, розроблена для Girex як client request для автоматизації першої лінії підтримки в Telegram. System класифікує requests, відповідає з knowledge base і створює structured tickets, коли case потребує follow-up. Для urgent, financial, compliance або security issues bot сповіщає команду в private admin group і передає conversation human support.",
+            focus:
+              "n8n workflow, який з'єднує Telegram Bot API, AI agent, knowledge-base logic, PostgreSQL conversation memory, ticket creation, human escalation, admin group notifications і safety rules, щоб bot не давав risky financial/legal promises та передавав сумнівні cases support-команді.",
+            stack: ["n8n", "Telegram Bot API", "AI Agent", "PostgreSQL", "Google Sheets", "Ticketing", "Escalation"],
+            highlights: [
+              "Request triage для registration, KYC, P2P deals, escrow, deposits/withdrawals, errors, merchants, security, compliance і general questions.",
+              "Ticket flow з user ID, email, deal number, screenshots, message description, category, priority і conversation history.",
+              "Human-in-the-loop escalation з Telegram alerts для urgent, financial, compliance, security або unclear cases.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/girex-workflow.png",
+                alt: "Girex n8n workflow",
+              },
+              {
+                src: "/projects/girex-admin-alert.png",
+                alt: "Girex admin Telegram alert",
+              },
+              {
+                src: "/projects/girex-bot-chat.png",
+                alt: "Girex support bot conversation",
               },
             ],
           },
@@ -783,26 +845,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               "Knowledge base, яку можуть оновлювати не технічні користувачі.",
               "Conversation flow для FAQs, availability і booking intent.",
               "Backend-ready architecture для підключення restaurant data та AI responses.",
-            ],
-            screenshots: [],
-          },
-        },
-        {
-          ...sharedProjects.ads,
-          categoryLabel: "AI-бот для звітів",
-          summary:
-            "Бот аналізує рекламу, ліди й партнерські дані, а потім створює звіти з практичними рекомендаціями.",
-          caseStudy: {
-            type: "Automation and AI reporting",
-            overview:
-              "Концепт автоматизації для campaign reporting: Telegram-first бот структурує marketing data, запускає AI-аналіз і перетворює його на практичні рекомендації для команди.",
-            focus:
-              "Automation workflow з bot commands, data handoff, AI analysis structure і Notion-style output для повторюваних campaign reviews.",
-            stack: ["Python", "Claude AI", "Telegram Bot API", "Notion", "Automation"],
-            highlights: [
-              "Telegram-first workflow для швидких reporting requests.",
-              "AI-generated campaign observations з actionable next steps.",
-              "Структурований output для team review і follow-up.",
             ],
             screenshots: [],
           },

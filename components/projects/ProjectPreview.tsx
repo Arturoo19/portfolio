@@ -43,6 +43,35 @@ export function ProjectPreview({
     );
   }
 
+  if (project.slug === "girex-support-agent") {
+    return (
+      <div className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-48">
+        <Image
+          src="/projects/girex-cover.png"
+          alt="Girex marketplace landing page"
+          fill
+          sizes={
+            caseHero
+              ? "(min-width: 1024px) 792px, calc(100vw - 5rem)"
+              : "(min-width: 1024px) 420px, calc(100vw - 4rem)"
+          }
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/10 to-slate-950/70" />
+        {caseHero ? null : (
+          <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3">
+            <span className="rounded-full border border-blue-300/25 bg-slate-950/75 px-3 py-1.5 text-xs font-black text-white shadow-lg shadow-black/30 backdrop-blur-md">
+              {project.previewLabel}
+            </span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-200 backdrop-blur-md">
+              Girex
+            </span>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   if (project.preview === "workflow") {
     return (
       <div className="h-40 rounded-xl border border-white/10 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:28px_28px] p-4 sm:h-48 sm:p-5">
@@ -70,7 +99,7 @@ export function ProjectPreview({
 
   if (project.slug === "rentauto") {
     return (
-    <div className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-48">
+      <div className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-48">
         <Image
           src={rentAutoHome}
           alt="RentAuto home page"
@@ -81,35 +110,32 @@ export function ProjectPreview({
               ? "(min-width: 1024px) 792px, calc(100vw - 5rem)"
               : "(min-width: 1024px) 420px, calc(100vw - 4rem)"
           }
-          className="object-cover"
+          className="object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-950/15 to-slate-950/65" />
-        <div className="absolute inset-x-5 top-5 flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-slate-200/80">
-          <span>{labels.case}</span>
-          <span>{labels.menu}</span>
-        </div>
-        <div className="absolute inset-0 grid place-items-center px-6 text-center">
-          <div>
-            {caseHero ? null : (
-              <p className="mx-auto w-fit rounded-full border border-white/15 bg-slate-950/70 px-4 py-2 text-sm font-black text-white shadow-xl shadow-black/35 backdrop-blur-md sm:text-base">
-                {project.previewLabel}
-              </p>
-            )}
-            {actionHref ? (
-              <a
-                href={actionHref}
-                target="_blank"
-                rel="noreferrer"
-                className={previewButtonClassName}
-              >
-                {labels.viewProject}
-                <span className="ml-2">↗</span>
-              </a>
-            ) : (
-              <span className={previewButtonClassName}>{labels.viewProject}</span>
-            )}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/10 to-slate-950/70" />
+        {caseHero ? null : (
+          <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3">
+            <span className="rounded-full border border-blue-300/25 bg-slate-950/75 px-3 py-1.5 text-xs font-black text-white shadow-lg shadow-black/30 backdrop-blur-md">
+              {project.previewLabel}
+            </span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-200 backdrop-blur-md">
+              RentAuto
+            </span>
           </div>
-        </div>
+        )}
+        {caseHero && actionHref ? (
+          <div className="absolute inset-0 grid place-items-center px-6 text-center">
+            <a
+              href={actionHref}
+              target="_blank"
+              rel="noreferrer"
+              className={previewButtonClassName}
+            >
+              {labels.viewProject}
+              <span className="ml-2">↗</span>
+            </a>
+          </div>
+        ) : null}
       </div>
     );
   }

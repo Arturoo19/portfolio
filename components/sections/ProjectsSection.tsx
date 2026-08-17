@@ -65,7 +65,7 @@ export function ProjectsSection() {
         </Reveal>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {visibleProjects.map((project, index) => (
-            <Reveal key={project.slug} delay={80 * Math.min(index, 5)}>
+            <Reveal key={project.slug} delay={80 * Math.min(index, 5)} className="h-full">
               <ProjectCard
                 project={project}
                 detailsLabel={copy.cta.details}
