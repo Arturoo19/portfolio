@@ -128,16 +128,16 @@ export function ProjectCaseModal({
             />
           </div>
 
-          <div className="mt-7">
-            <div className="flex items-center justify-between gap-4">
-              <h4 className="text-sm font-black uppercase tracking-[0.28em] text-slate-500">
-                {labels.screenshots}
-              </h4>
-              <span className="text-sm font-bold text-slate-500">
-                {screenshots.length}
-              </span>
-            </div>
-            {screenshots.length > 0 ? (
+          {screenshots.length > 0 ? (
+            <div className="mt-7">
+              <div className="flex items-center justify-between gap-4">
+                <h4 className="text-sm font-black uppercase tracking-[0.28em] text-slate-500">
+                  {labels.screenshots}
+                </h4>
+                <span className="text-sm font-bold text-slate-500">
+                  {screenshots.length}
+                </span>
+              </div>
               <div className="mt-4 grid max-w-md grid-cols-2 gap-3">
                 {screenshots.map((screenshot, index) => (
                   <ScreenshotButton
@@ -147,17 +147,8 @@ export function ProjectCaseModal({
                   />
                 ))}
               </div>
-            ) : (
-              <div className="mt-4 grid max-w-md grid-cols-2 gap-3">
-                {[1, 2].map((index) => (
-                  <div
-                    key={index}
-                    className="aspect-[16/10] rounded-xl border border-dashed border-white/15 bg-white/[0.03]"
-                  />
-                ))}
-              </div>
-            )}
-          </div>
+            </div>
+          ) : null}
 
           <div className="mt-8 flex items-center gap-4">
             <p className="text-sm font-black uppercase tracking-[0.28em] text-slate-500">
@@ -239,6 +230,10 @@ function getProjectScreenshots(project: Project) {
       {
         src: rentAutoScreenshotTwo.src,
         alt: "RentAuto project screen",
+      },
+      {
+        src: "/projects/rentauto-n8n-workflows.png",
+        alt: "RentAuto n8n automation workflows",
       },
     ];
   }

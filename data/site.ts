@@ -52,12 +52,12 @@ const sharedProjects = {
   },
   chat: {
     slug: "ai-chat-assistant",
-    title: "AI Chat Assistant",
+    title: "RentAuto AI Chat Assistant",
     year: "2026",
     category: "ai" as const,
-    tags: ["Node.js", "Supabase", "Google Drive", "RAG"],
+    tags: ["Chatwoot", "AI Agent", "RentAuto", "Knowledge Base", "Automation"],
     preview: "chat" as const,
-    previewLabel: "Restaurant AI agent",
+    previewLabel: "RentAuto chat assistant",
   },
   girex: {
     slug: "girex-support-agent",
@@ -68,6 +68,26 @@ const sharedProjects = {
     preview: "workflow" as const,
     previewLabel: "Telegram support agent",
     nodes: ["Telegram", "AI", "Support"],
+  },
+  openclawDigest: {
+    slug: "openclaw-community-digest",
+    title: "OpenClaw Digest Agent",
+    year: "2026",
+    category: "automation" as const,
+    tags: ["OpenClaw", "Telegram", "AI Agent", "Scheduler", "Digest"],
+    preview: "workflow" as const,
+    previewLabel: "24h community digest",
+    nodes: ["Chats", "AI", "Digest"],
+  },
+  obsidianBrain: {
+    slug: "obsidian-second-brain-agent",
+    title: "Obsidian Second Brain Agent",
+    year: "2026",
+    category: "ai" as const,
+    tags: ["OpenClaw", "Obsidian", "AI Agent", "Knowledge Graph", "Personal CRM"],
+    preview: "workflow" as const,
+    previewLabel: "Second brain assistant",
+    nodes: ["Notes", "AI", "Context"],
   },
 };
 
@@ -132,12 +152,12 @@ export const siteCopy: Record<Locale, SiteCopy> = {
             overview:
               "RentAuto is an intelligent full-stack web platform for managing vehicle rental online. It centralizes the customer journey from browsing and filtering cars to checking availability, calculating the final rental price, creating reservations, paying online, and reviewing personal booking history. The product also includes a protected admin area for managing the fleet, reviewing reservations, and analyzing business activity.",
             focus:
-              "Layered architecture with Angular for the user interface, NestJS for the REST API and business logic, PostgreSQL with TypeORM for users, cars and rentals, JWT and bcrypt for authentication, guards and role-based access for protected routes, Stripe for payments, Docker-ready deployment, and n8n/AI automations connected to Telegram, email, Stripe and the database.",
+              "Layered architecture with Angular for the user interface, NestJS for the REST API and business logic, PostgreSQL with TypeORM for users, cars and rentals, JWT and bcrypt for authentication, guards and role-based access for protected routes, Stripe for payments, Docker-ready deployment, and n8n/AI automations connected to the database, Telegram, email and Stripe events.",
             stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
             highlights: [
               "Customer flow with registration, login, vehicle catalog, filters by dates, city, category and price, reservation history, availability validation and automatic price calculation.",
               "Admin dashboard with fleet management, protected administrative actions, reservation control, income metrics, new users, active cars, cancellations and most profitable vehicles.",
-              "Automation layer with web AI assistant, daily and weekly Telegram reports, admin Telegram bot for quick statistics, data-based recommendations, and recovery emails for unfinished payments.",
+              "Automation layer with a web AI assistant for users, database-aware answers, daily and weekly admin reports, Telegram admin chat, data-based recommendations, and Stripe payment recovery emails.",
             ],
             screenshots: [
               {
@@ -186,23 +206,73 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           },
         },
         {
-          ...sharedProjects.chat,
-          categoryLabel: "Restaurant AI agent",
+          ...sharedProjects.openclawDigest,
+          categoryLabel: "Personal AI automation",
           summary:
-            "An AI assistant that answers customer questions, manages bookings, and works from an easy-to-update knowledge base.",
+            "A personal OpenClaw agent that monitors selected Telegram chats and channels, filters messages by keywords, extracts the most useful discussions, and sends a digest every 24 hours.",
           caseStudy: {
-            type: "AI customer support system",
+            type: "Autonomous community digest agent",
             overview:
-              "AI assistant concept for restaurant support, focused on answering customer questions from a maintained knowledge base and helping with booking-related intent.",
+              "OpenClaw Digest Agent is a personal AI automation built to avoid manually checking multiple chats and channels every day. I define the keywords and topics I care about, and the agent reviews the last 24 hours of community activity to find the most relevant discussions, links, and signals.",
             focus:
-              "Assistant architecture with a maintainable knowledge base, backend conversation flow, booking intent logic, and integration points for restaurant operations.",
-            stack: ["Node.js", "Supabase", "Google Drive", "RAG", "API integrations"],
+              "The workflow combines scheduled execution, Telegram source monitoring, keyword filtering, AI summarization, relevance ranking, and automated delivery. The result is a compact daily digest with quick summaries, useful messages, original links, topics, and short explanations of why each item matters.",
+            stack: ["OpenClaw", "Telegram", "AI Agent", "Scheduler", "Keyword filters", "Digest automation"],
             highlights: [
-              "Knowledge-base structure that non-technical users can update.",
-              "Conversation flow for FAQs, availability, and booking intent.",
-              "Backend-ready architecture for connecting restaurant data and AI responses.",
+              "Monitors selected chats and channels based on custom keywords instead of requiring manual reading.",
+              "Extracts the strongest discussions, useful links, original messages, topics and practical signals from the last 24 hours.",
+              "Sends an autonomous daily digest so important community insights do not get lost in message noise.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/openclaw-community-digest.png",
+                alt: "OpenClaw community digest Telegram report",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.obsidianBrain,
+          categoryLabel: "Personal AI system",
+          summary:
+            "A personal AI assistant connected to my Obsidian second brain: it keeps structured memory, links ideas, projects and tasks, and helps me recover context instead of starting from zero.",
+          caseStudy: {
+            type: "Personal AI assistant with structured memory",
+            overview:
+              "Obsidian Second Brain Agent is my own AI assistant built around a structured Obsidian knowledge base. Instead of behaving like a normal chat that forgets context, it works with organized notes, project history, ideas, decisions and personal workflows that I can keep improving over time.",
+            focus:
+              "The system is designed to connect separate parts of my work: tasks, product ideas, technical notes, client context, learning material and long-term plans. The assistant helps me find relevant information, create connections between different notes, remember commitments and continue thinking from the right context.",
+            stack: ["OpenClaw", "Obsidian", "AI Agent", "Knowledge Graph", "Markdown", "Personal automation"],
+            highlights: [
+              "Uses Obsidian as a structured second brain instead of relying only on temporary chat memory.",
+              "Links ideas, tasks, projects and notes so related context can surface when I need it.",
+              "Helps me avoid losing important decisions, follow-ups and useful knowledge across different areas of work.",
             ],
             screenshots: [],
+          },
+        },
+        {
+          ...sharedProjects.chat,
+          categoryLabel: "Embedded AI support",
+          summary:
+            "Embedded RentAuto chat assistant that answers vehicle questions, suggests available cars, explains prices, and guides users toward the reservation flow.",
+          caseStudy: {
+            type: "AI assistant inside RentAuto",
+            overview:
+              "RentAuto AI Chat Assistant is an embedded support assistant inside the vehicle rental platform. It helps users ask natural-language questions about available cars, categories, prices, booking conditions, and next steps without leaving the website.",
+            focus:
+              "The assistant is designed around the RentAuto product context: it can respond with relevant vehicle options, ask for missing trip details such as dates and number of passengers, explain the booking process, and keep the user moving toward a reservation while avoiding unsupported promises.",
+            stack: ["Chatwoot", "AI Agent", "RentAuto", "Knowledge Base", "Automation"],
+            highlights: [
+              "Answers rental questions directly inside the RentAuto website instead of forcing users to search through the interface.",
+              "Suggests relevant cars with useful details such as year, price per day, category and image preview.",
+              "Guides the user toward the reservation flow by asking for dates, travel context and passenger count when needed.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/rentauto-chat-assistant-full.png",
+                alt: "RentAuto embedded AI chat assistant",
+              },
+            ],
           },
         },
       ],
@@ -454,12 +524,12 @@ export const siteCopy: Record<Locale, SiteCopy> = {
             overview:
               "RentAuto es una plataforma web inteligente full-stack para gestionar el alquiler de vehiculos de forma digital. Centraliza el recorrido del cliente: consultar y filtrar coches, comprobar disponibilidad, calcular el precio final, crear reservas, avanzar en el pago online y revisar el historial personal. Tambien incluye una zona de administracion protegida para gestionar la flota, revisar reservas y analizar la actividad del negocio.",
             focus:
-              "Arquitectura por capas con Angular para la interfaz, NestJS para la API REST y la logica de negocio, PostgreSQL con TypeORM para usuarios, coches y reservas, JWT y bcrypt para autenticacion, guards y control de roles para rutas protegidas, Stripe para pagos, despliegue preparado con Docker y automatizaciones n8n/IA conectadas con Telegram, correo, Stripe y base de datos.",
+              "Arquitectura por capas con Angular para la interfaz, NestJS para la API REST y la logica de negocio, PostgreSQL con TypeORM para usuarios, coches y reservas, JWT y bcrypt para autenticacion, guards y control de roles para rutas protegidas, Stripe para pagos, despliegue preparado con Docker y automatizaciones n8n/IA conectadas con base de datos, Telegram, correo y eventos de Stripe.",
             stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "IA", "Docker"],
             highlights: [
               "Flujo de cliente con registro, login, catalogo de vehiculos, filtros por fechas, ciudad, categoria y precio, historial de reservas, validacion de disponibilidad y calculo automatico del precio final.",
               "Dashboard administrativo con gestion de flota, acciones protegidas, control de reservas, ingresos, nuevos usuarios, coches activos, cancelaciones y vehiculos mas rentables.",
-              "Capa de automatizacion con asistente IA web, informes diarios y semanales en Telegram, bot administrativo para estadisticas rapidas, recomendaciones basadas en datos y correos para recuperar pagos no finalizados.",
+              "Capa de automatizacion con asistente IA web para usuarios, respuestas conectadas a la base de datos, informes diarios y semanales para administradores, admin chat en Telegram, recomendaciones basadas en datos y correos de recuperacion por fallos de pago en Stripe.",
             ],
             screenshots: [
               {
@@ -508,23 +578,73 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           },
         },
         {
-          ...sharedProjects.chat,
-          categoryLabel: "Agente IA para restaurante",
+          ...sharedProjects.openclawDigest,
+          categoryLabel: "Automatizacion IA personal",
           summary:
-            "Asistente IA que responde preguntas, gestiona reservas y trabaja desde una base de conocimiento facil de actualizar.",
+            "Agente personal en OpenClaw que monitoriza chats y canales de Telegram, filtra mensajes por palabras clave, detecta lo mas importante y envia un resumen cada 24 horas.",
           caseStudy: {
-            type: "Sistema IA de atencion al cliente",
+            type: "Agente autonomo de resumen comunitario",
             overview:
-              "Concepto de asistente IA para soporte de restaurante, centrado en responder desde una base de conocimiento mantenible y ayudar con intenciones de reserva.",
+              "OpenClaw Digest Agent es una automatizacion IA personal creada para no tener que revisar manualmente varios chats y canales cada dia. Defino las palabras clave y temas que me interesan, y el agente analiza las ultimas 24 horas de actividad para encontrar las conversaciones, enlaces y senales mas relevantes.",
             focus:
-              "Arquitectura de asistente con base de conocimiento mantenible, flujo backend de conversacion, logica de reserva e integraciones para operacion de restaurante.",
-            stack: ["Node.js", "Supabase", "Google Drive", "RAG", "API integrations"],
+              "El workflow combina ejecucion programada, monitorizacion de fuentes en Telegram, filtros por palabras clave, resumen con IA, priorizacion por relevancia y entrega automatica. El resultado es un digest diario compacto con resumen rapido, mensajes utiles, enlaces originales, temas y una breve explicacion de por que cada punto importa.",
+            stack: ["OpenClaw", "Telegram", "AI Agent", "Scheduler", "Keyword filters", "Digest automation"],
             highlights: [
-              "Base de conocimiento facil de actualizar por usuarios no tecnicos.",
-              "Flujo conversacional para FAQs, disponibilidad e intencion de reserva.",
-              "Arquitectura preparada para conectar datos del restaurante y respuestas IA.",
+              "Monitoriza chats y canales seleccionados segun keywords personalizadas, sin tener que leer todo manualmente.",
+              "Extrae discusiones importantes, enlaces utiles, mensajes originales, temas y senales practicas de las ultimas 24 horas.",
+              "Envia automaticamente un digest diario para que la informacion importante no se pierda entre mensajes repetitivos.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/openclaw-community-digest.png",
+                alt: "Resumen comunitario generado por OpenClaw en Telegram",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.obsidianBrain,
+          categoryLabel: "Sistema IA personal",
+          summary:
+            "Asistente IA personal conectado a mi segundo cerebro en Obsidian: mantiene memoria estructurada, relaciona ideas, proyectos y tareas, y me ayuda a recuperar contexto sin empezar de cero.",
+          caseStudy: {
+            type: "Asistente IA personal con memoria estructurada",
+            overview:
+              "Obsidian Second Brain Agent es mi propio asistente IA construido alrededor de una base de conocimiento estructurada en Obsidian. En lugar de funcionar como un chat normal que pierde contexto, trabaja con notas organizadas, historial de proyectos, ideas, decisiones y flujos personales que puedo seguir mejorando.",
+            focus:
+              "El sistema esta pensado para conectar partes separadas de mi trabajo: tareas, ideas de producto, notas tecnicas, contexto de clientes, aprendizaje y planes a largo plazo. El asistente me ayuda a encontrar informacion relevante, crear conexiones entre notas, recordar compromisos y continuar pensando desde el contexto correcto.",
+            stack: ["OpenClaw", "Obsidian", "AI Agent", "Knowledge Graph", "Markdown", "Personal automation"],
+            highlights: [
+              "Usa Obsidian como segundo cerebro estructurado, no solo memoria temporal de chat.",
+              "Relaciona ideas, tareas, proyectos y notas para recuperar contexto util cuando lo necesito.",
+              "Ayuda a no perder decisiones, follow-ups y conocimiento importante entre distintas areas de trabajo.",
             ],
             screenshots: [],
+          },
+        },
+        {
+          ...sharedProjects.chat,
+          categoryLabel: "Soporte IA integrado",
+          summary:
+            "Asistente de chat integrado en RentAuto que responde dudas sobre vehiculos, propone coches disponibles, explica precios y guia al usuario hacia la reserva.",
+          caseStudy: {
+            type: "Asistente IA dentro de RentAuto",
+            overview:
+              "RentAuto AI Chat Assistant es un asistente de soporte integrado dentro de la plataforma de alquiler de vehiculos. Permite que el usuario pregunte en lenguaje natural sobre coches disponibles, categorias, precios, condiciones de reserva y siguientes pasos sin salir de la web.",
+            focus:
+              "El asistente esta pensado alrededor del contexto real de RentAuto: puede responder con opciones de vehiculos, pedir datos que faltan como fechas o numero de pasajeros, explicar el proceso de reserva y mantener al usuario avanzando hacia una reserva sin hacer promesas no soportadas.",
+            stack: ["Chatwoot", "AI Agent", "RentAuto", "Knowledge Base", "Automation"],
+            highlights: [
+              "Responde dudas sobre alquiler directamente dentro de RentAuto, sin obligar al usuario a buscar toda la informacion manualmente.",
+              "Propone coches relevantes con datos utiles como ano, precio por dia, categoria e imagen del vehiculo.",
+              "Guia al usuario hacia la reserva pidiendo fechas, contexto del viaje y numero de personas cuando hace falta.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/rentauto-chat-assistant-full.png",
+                alt: "Asistente IA integrado en RentAuto",
+              },
+            ],
           },
         },
       ],
@@ -776,12 +896,12 @@ export const siteCopy: Record<Locale, SiteCopy> = {
             overview:
               "RentAuto - це intelligent full-stack web platform для digital management оренди автомобілів. Вона централізує customer journey: browsing і filtering cars, availability check, automatic price calculation, reservations, online payment flow та personal booking history. Також є protected admin area для fleet management, reservation review і business activity analysis.",
             focus:
-              "Layered architecture: Angular для user interface, NestJS для REST API і business logic, PostgreSQL з TypeORM для users, cars і rentals, JWT і bcrypt для authentication, guards і role-based access для protected routes, Stripe payments, Docker-ready deployment і n8n/AI automations з Telegram, email, Stripe та database.",
+              "Layered architecture: Angular для user interface, NestJS для REST API і business logic, PostgreSQL з TypeORM для users, cars і rentals, JWT і bcrypt для authentication, guards і role-based access для protected routes, Stripe payments, Docker-ready deployment і n8n/AI automations, підключені до database, Telegram, email і Stripe events.",
             stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
             highlights: [
               "Customer flow з registration, login, vehicle catalog, filters by dates, city, category and price, reservation history, availability validation і automatic final price calculation.",
               "Admin dashboard з fleet management, protected administrative actions, reservation control, income metrics, new users, active cars, cancellations і most profitable vehicles.",
-              "Automation layer з web AI assistant, daily/weekly Telegram reports, admin Telegram bot для quick statistics, data-based recommendations і recovery emails для unfinished payments.",
+              "Automation layer з web AI assistant для users, database-aware answers, daily/weekly admin reports, Telegram admin chat, data-based recommendations і Stripe payment recovery emails.",
             ],
             screenshots: [
               {
@@ -830,23 +950,73 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           },
         },
         {
-          ...sharedProjects.chat,
-          categoryLabel: "AI-агент для ресторану",
+          ...sharedProjects.openclawDigest,
+          categoryLabel: "Personal AI automation",
           summary:
-            "AI-асистент відповідає на питання, допомагає з бронюваннями та працює з базою знань, яку легко оновлювати.",
+            "Personal OpenClaw agent, який моніторить вибрані Telegram chats/channels, фільтрує повідомлення за keywords, знаходить найважливіше і сам надсилає digest раз на 24 години.",
           caseStudy: {
-            type: "AI customer support system",
+            type: "Autonomous community digest agent",
             overview:
-              "Концепт AI-асистента для підтримки ресторану: відповіді з підтримуваної бази знань і допомога з booking intent.",
+              "OpenClaw Digest Agent - це персональна AI automation, яку я зробив для щоденного моніторингу потрібних Telegram chats і channels. Я задаю keywords і теми, а агент аналізує останні 24 години активності та знаходить найцінніші discussions, links і практичні сигнали.",
             focus:
-              "Архітектура асистента з підтримуваною knowledge base, backend conversation flow, booking intent logic та integration points для ресторанних операцій.",
-            stack: ["Node.js", "Supabase", "Google Drive", "RAG", "API integrations"],
+              "Workflow поєднує scheduled execution, Telegram monitoring, keyword filtering, AI summarization, relevance ranking і automatic delivery. На виході я отримую compact daily digest з quick summary, useful messages, original links, topics і поясненням, чому кожен пункт вартий уваги.",
+            stack: ["OpenClaw", "Telegram", "AI Agent", "Scheduler", "Keyword filters", "Digest automation"],
             highlights: [
-              "Knowledge base, яку можуть оновлювати не технічні користувачі.",
-              "Conversation flow для FAQs, availability і booking intent.",
-              "Backend-ready architecture для підключення restaurant data та AI responses.",
+              "Моніторить вибрані chats і channels за custom keywords, без ручного перечитування всього потоку.",
+              "Витягує сильні discussions, useful links, original messages, topics і practical signals за останні 24 години.",
+              "Автоматично надсилає daily digest, щоб важлива інформація не губилася серед зайвого шуму.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/openclaw-community-digest.png",
+                alt: "OpenClaw community digest Telegram report",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.obsidianBrain,
+          categoryLabel: "Personal AI system",
+          summary:
+            "Мій персональний AI assistant з Obsidian second brain: тримає структуровану пам'ять, зв'язує ідеї, проєкти й задачі та допомагає не починати контекст з нуля.",
+          caseStudy: {
+            type: "Personal AI assistant with structured memory",
+            overview:
+              "Obsidian Second Brain Agent - це мій власний AI assistant, побудований навколо структурованої Obsidian knowledge base. На відміну від звичайного чату, який швидко втрачає контекст, він працює з організованими notes, project history, ideas, decisions і personal workflows, які я можу постійно розвивати.",
+            focus:
+              "System з'єднує різні частини моєї роботи: tasks, product ideas, technical notes, client context, learning material і long-term plans. Assistant допомагає знаходити relevant information, будувати links між нотатками, пам'ятати commitments і продовжувати роботу з правильного контексту.",
+            stack: ["OpenClaw", "Obsidian", "AI Agent", "Knowledge Graph", "Markdown", "Personal automation"],
+            highlights: [
+              "Використовує Obsidian як structured second brain, а не тільки тимчасову chat memory.",
+              "Зв'язує ideas, tasks, projects і notes, щоб потрібний context швидко повертався в роботу.",
+              "Допомагає не губити важливі decisions, follow-ups і knowledge між різними напрямками.",
             ],
             screenshots: [],
+          },
+        },
+        {
+          ...sharedProjects.chat,
+          categoryLabel: "Embedded AI support",
+          summary:
+            "Chat assistant, вбудований у RentAuto: відповідає про vehicles, пропонує доступні авто, пояснює prices і веде user до reservation flow.",
+          caseStudy: {
+            type: "AI assistant inside RentAuto",
+            overview:
+              "RentAuto AI Chat Assistant - це embedded support assistant всередині vehicle rental platform. User може питати natural-language questions про available cars, categories, prices, booking conditions і next steps без виходу з website.",
+            focus:
+              "Assistant побудований навколо реального RentAuto context: він може відповідати з relevant vehicle options, просити missing trip details як dates і passenger count, пояснювати booking process і вести user до reservation без unsupported promises.",
+            stack: ["Chatwoot", "AI Agent", "RentAuto", "Knowledge Base", "Automation"],
+            highlights: [
+              "Відповідає на rental questions прямо всередині RentAuto website, без ручного пошуку по інтерфейсу.",
+              "Пропонує relevant cars з useful details: year, price per day, category і vehicle image preview.",
+              "Веде user до reservation flow, питаючи dates, travel context і passenger count, коли це потрібно.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/rentauto-chat-assistant-full.png",
+                alt: "RentAuto embedded AI chat assistant",
+              },
+            ],
           },
         },
       ],
