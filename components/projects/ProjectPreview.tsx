@@ -103,6 +103,38 @@ export function ProjectPreview({
     );
   }
 
+  if (project.slug === "portfolio-site") {
+    return (
+      <div
+        className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-48 data-[case=true]:aspect-video data-[case=true]:h-auto"
+        data-case={caseHero}
+      >
+        <Image
+          src="/projects/portfolio-site-cover.png"
+          alt="Personal portfolio home page"
+          fill
+          sizes={
+            caseHero
+              ? "(min-width: 1024px) 792px, calc(100vw - 5rem)"
+              : "(min-width: 1024px) 420px, calc(100vw - 4rem)"
+          }
+          className={caseHero ? "object-contain" : "object-cover object-top"}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/5 via-slate-950/10 to-slate-950/80" />
+        {caseHero ? null : (
+          <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3">
+            <span className="rounded-full border border-blue-300/25 bg-slate-950/75 px-3 py-1.5 text-xs font-black text-white shadow-lg shadow-black/30 backdrop-blur-md">
+              {project.previewLabel}
+            </span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-black uppercase text-slate-200 backdrop-blur-md">
+              Next.js
+            </span>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   if (project.slug === "girex-support-agent") {
     return (
       <div className="relative h-40 overflow-hidden rounded-xl border border-white/10 bg-slate-950 sm:h-48">

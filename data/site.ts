@@ -6,7 +6,7 @@ export const owner = {
   fullName: "Artur",
   surname: "Azizbekov",
   role: "Full-stack developer",
-  email: "artur.azizbekov.dam@gmail.com",
+  email: "artur.azizbekov.dev@gmail.com",
   phone: "+34 602 415 691",
   telegram: "https://t.me/tonn_19",
   telegramUsername: "@tonn_19",
@@ -68,6 +68,15 @@ const sharedProjects = {
     preview: "workflow" as const,
     previewLabel: "Telegram support agent",
     nodes: ["Telegram", "AI", "Support"],
+  },
+  portfolio: {
+    slug: "portfolio-site",
+    title: "Personal Portfolio System",
+    year: "2026",
+    category: "websites" as const,
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "UX Writing", "SEO"],
+    preview: "website" as const,
+    previewLabel: "Portfolio as a product",
   },
   openclawDigest: {
     slug: "openclaw-community-digest",
@@ -201,6 +210,32 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               {
                 src: "/projects/girex-bot-chat.png",
                 alt: "Girex support bot conversation",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.portfolio,
+          categoryLabel: "Portfolio product system",
+          status: "Live",
+          summary:
+            "A personal portfolio designed as a product: clear positioning, multilingual content, responsive UI, selected case studies, contact flows, and performance-focused Next.js delivery.",
+          caseStudy: {
+            type: "Personal portfolio as a product",
+            overview:
+              "Personal Portfolio System is the website you are viewing: a focused product for presenting my work, technical range, and professional direction. The goal was not just to publish a profile page, but to build a clear hiring and collaboration experience where projects, experience, skills, and contact options are easy to scan.",
+            focus:
+              "The implementation uses the Next.js App Router, React components, typed content, Tailwind CSS, responsive layouts, localized copy, accessible interactions, project case modals, optimized media handling, and metadata prepared for a polished public portfolio.",
+            stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "App Router", "Responsive UI", "SEO"],
+            highlights: [
+              "Structured the site around decision-making: selected work first, then experience, capabilities, about, and contact.",
+              "Built a reusable multilingual content system so English, Spanish, and Ukrainian versions stay consistent.",
+              "Designed project cards and case modals to present each project through problem, technical focus, stack, and concrete highlights.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/portfolio-site-cover.png",
+                alt: "Personal portfolio home page",
               },
             ],
           },
@@ -578,6 +613,32 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           },
         },
         {
+          ...sharedProjects.portfolio,
+          categoryLabel: "Sistema de portfolio personal",
+          status: "Live",
+          summary:
+            "Portfolio personal planteado como producto: posicionamiento claro, contenido multilingue, UI responsive, casos seleccionados, flujos de contacto y entrega con Next.js.",
+          caseStudy: {
+            type: "Portfolio personal como producto",
+            overview:
+              "Personal Portfolio System es esta web: un producto enfocado en presentar mi trabajo, mi rango tecnico y mi direccion profesional. El objetivo no era publicar solo una pagina de perfil, sino crear una experiencia clara para contratacion y colaboraciones, donde proyectos, experiencia, capacidades y contacto se puedan entender rapido.",
+            focus:
+              "La implementacion usa Next.js App Router, componentes React, contenido tipado, Tailwind CSS, layouts responsive, copy localizado, interacciones accesibles, modales de caso para proyectos, manejo optimizado de media y metadata preparada para un portfolio publico pulido.",
+            stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "App Router", "Responsive UI", "SEO"],
+            highlights: [
+              "Estructure el sitio alrededor de la toma de decision: trabajos seleccionados primero, despues experiencia, capacidades, about y contacto.",
+              "Construccion de un sistema de contenido multilingue para mantener consistentes las versiones en ingles, espanol y ucraniano.",
+              "Diseno de tarjetas y modales de caso para explicar cada proyecto con problema, foco tecnico, stack y resultados concretos.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/portfolio-site-cover.png",
+                alt: "Pagina principal del portfolio personal",
+              },
+            ],
+          },
+        },
+        {
           ...sharedProjects.openclawDigest,
           categoryLabel: "Automatizacion IA personal",
           summary:
@@ -945,6 +1006,32 @@ export const siteCopy: Record<Locale, SiteCopy> = {
               {
                 src: "/projects/girex-bot-chat.png",
                 alt: "Girex support bot conversation",
+              },
+            ],
+          },
+        },
+        {
+          ...sharedProjects.portfolio,
+          categoryLabel: "Portfolio як продуктова система",
+          status: "Live",
+          summary:
+            "Персональне portfolio, подане як продукт: чітке позиціонування, мультимовний контент, responsive UI, selected cases, contact flow і Next.js delivery.",
+          caseStudy: {
+            type: "Personal portfolio як продукт",
+            overview:
+              "Personal Portfolio System - це сайт, який ви зараз переглядаєте: сфокусований продукт для презентації моїх робіт, технічного діапазону та професійного напрямку. Ціль була не просто зробити profile page, а побудувати зрозумілий hiring/collaboration experience, де projects, experience, skills і contact options легко скануються.",
+            focus:
+              "Implementation використовує Next.js App Router, React components, typed content, Tailwind CSS, responsive layouts, localized copy, accessible interactions, project case modals, optimized media handling і metadata для polished public portfolio.",
+            stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "App Router", "Responsive UI", "SEO"],
+            highlights: [
+              "Структурував сайт під decision-making: selected work спочатку, потім experience, capabilities, about і contact.",
+              "Побудував reusable multilingual content system, щоб English, Spanish і Ukrainian versions залишалися consistent.",
+              "Оформив project cards і case modals так, щоб кожен case показував problem, technical focus, stack і конкретні highlights.",
+            ],
+            screenshots: [
+              {
+                src: "/projects/portfolio-site-cover.png",
+                alt: "Головна сторінка персонального portfolio",
               },
             ],
           },
