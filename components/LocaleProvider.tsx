@@ -21,11 +21,13 @@ type LocaleContextValue = {
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(() => {
-    if (typeof window === "undefined") {
-      return defaultLocale;
-    }
+  const [locale, setLocaleState] = useState<Locale>(defaultLocale);
 
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
+  useEffect(() => {
     let savedLocale: string | null = null;
 
     try {
@@ -35,15 +37,9 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     }
 
     if (savedLocale === "en" || savedLocale === "es" || savedLocale === "uk") {
-      return savedLocale;
+      setLocaleState(savedLocale);
     }
-
-    return defaultLocale;
-  });
-
-  useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
+  }, []);
 
   const setLocale = (nextLocale: Locale) => {
     setLocaleState(nextLocale);

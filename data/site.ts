@@ -927,21 +927,21 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       role: "Full-stack розробник",
       status: "Готовий до нового виклику",
       intro:
-        "Створюю повноцінні web-продукти: зрозумілі інтерфейси, надійні API, бази даних, інтеграції та автоматизації. Можу приєднатися до команди або допомогти перетворити ідею на робочий продукт.",
+        "Створюю повноцінні веб-продукти: зрозумілі інтерфейси, надійні API, бази даних, інтеграції та автоматизації. Можу приєднатися до команди або допомогти перетворити ідею на робочий продукт.",
       highlights: [
-        "Frontend, backend і база даних, з'єднані в один зрозумілий flow",
-        "Практичний досвід з production systems, AWS, Linux, Git і debugging",
-        "Automation та AI тільки там, де вони роблять продукт швидшим або кориснішим",
+        "Frontend, backend і база даних, з'єднані в один зрозумілий процес",
+        "Практичний досвід із продакшн-системами, AWS, Linux, Git і налагодженням",
+        "Автоматизація та AI тільки там, де вони роблять продукт швидшим або кориснішим",
       ],
     },
     projects: {
       eyebrow: "Вибрані роботи",
       title: "Проєкти, які показують стек",
       description:
-        "Спочатку full-stack продукти, а автоматизації та AI як додаткова сильна сторона.",
+        "Спочатку full-stack продукти, а автоматизації та AI - як додаткова сильна сторона.",
       categories: [
         { id: "all", label: "Усі" },
-        { id: "websites", label: "Full-stack і web" },
+        { id: "websites", label: "Full-stack і веб" },
         { id: "ai", label: "AI-системи" },
         { id: "automation", label: "Автоматизації" },
       ],
@@ -949,20 +949,21 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         {
           ...sharedProjects.rentauto,
           categoryLabel: "Full-stack платформа",
-          status: "Live",
+          status: "Опубліковано",
+          previewLabel: "Платформа оренди авто",
           summary:
-            "Digital платформа оренди авто з filters, availability checks, bookings, Stripe payments, admin tools, statistics і AI/n8n automations.",
+            "Цифрова платформа оренди авто з фільтрами, перевіркою доступності, бронюваннями, платежами через Stripe, адмін-інструментами, статистикою та AI/n8n автоматизаціями.",
           caseStudy: {
             type: "Full-stack платформа оренди",
             overview:
-              "RentAuto - це intelligent full-stack web platform для digital management оренди автомобілів. Вона централізує customer journey: browsing і filtering cars, availability check, automatic price calculation, reservations, online payment flow та personal booking history. Також є protected admin area для fleet management, reservation review і business activity analysis.",
+              "RentAuto - це full-stack веб-платформа для цифрового керування орендою автомобілів. Вона об'єднує шлях клієнта: перегляд і фільтрацію авто, перевірку доступності, автоматичний розрахунок ціни, бронювання, онлайн-оплату та історію особистих замовлень. Також є захищена адмін-зона для керування автопарком, перегляду бронювань і аналізу активності бізнесу.",
             focus:
-              "Layered architecture: Angular для user interface, NestJS для REST API і business logic, PostgreSQL з TypeORM для users, cars і rentals, JWT і bcrypt для authentication, guards і role-based access для protected routes, Stripe payments, Docker-ready deployment і n8n/AI automations, підключені до database, Telegram, email і Stripe events.",
+              "Багатошарова архітектура: Angular для інтерфейсу, NestJS для REST API та бізнес-логіки, PostgreSQL з TypeORM для користувачів, авто й оренд, JWT і bcrypt для автентифікації, guards і рольовий доступ для захищених маршрутів, платежі Stripe, підготовка до Docker-розгортання та n8n/AI автоматизації, підключені до бази даних, Telegram, email і подій Stripe.",
             stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
             highlights: [
-              "Customer flow з registration, login, vehicle catalog, filters by dates, city, category and price, reservation history, availability validation і automatic final price calculation.",
-              "Admin dashboard з fleet management, protected administrative actions, reservation control, income metrics, new users, active cars, cancellations і most profitable vehicles.",
-              "Automation layer з web AI assistant для users, database-aware answers, daily/weekly admin reports, Telegram admin chat, data-based recommendations і Stripe payment recovery emails.",
+              "Клієнтський процес із реєстрацією, входом, каталогом авто, фільтрами за датами, містом, категорією та ціною, історією бронювань, перевіркою доступності й автоматичним розрахунком фінальної вартості.",
+              "Адмін-панель із керуванням автопарком, захищеними адміністративними діями, контролем бронювань, метриками доходу, новими користувачами, активними авто, скасуваннями та найприбутковішими машинами.",
+              "Шар автоматизацій із веб AI-асистентом для користувачів, відповідями з урахуванням даних із бази, щоденними й щотижневими звітами для адміністратора, Telegram-чатом для адміна, рекомендаціями на основі даних і листами для відновлення платежів Stripe.",
             ],
             screenshots: [
               {
@@ -978,34 +979,35 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         },
         {
           ...sharedProjects.girex,
-          categoryLabel: "AI support automation",
-          status: "Client request",
+          categoryLabel: "AI-автоматизація підтримки",
+          status: "Клієнтський запит",
+          previewLabel: "Telegram-агент підтримки",
           summary:
-            "Telegram AI support bot для Girex: класифікує звернення, відповідає з бази знань, ескалує urgent cases, сповіщає команду і створює tickets.",
+            "Telegram AI-бот підтримки для Girex: класифікує звернення, відповідає з бази знань, передає термінові випадки команді, сповіщає адміністраторів і створює тікети.",
           caseStudy: {
-            type: "Telegram AI support and ticketing",
+            type: "Telegram AI-підтримка та тікети",
             overview:
-              "Girex Support Agent - це AI support solution, розроблена для Girex як client request для автоматизації першої лінії підтримки в Telegram. System класифікує requests, відповідає з knowledge base і створює structured tickets, коли case потребує follow-up. Для urgent, financial, compliance або security issues bot сповіщає команду в private admin group і передає conversation human support.",
+              "Girex Support Agent - це AI-рішення для підтримки, розроблене для Girex як клієнтський запит на автоматизацію першої лінії підтримки в Telegram. Система класифікує звернення, відповідає з бази знань і створює структуровані тікети, коли випадок потребує подальшої роботи. Для термінових, фінансових, комплаєнс- або безпекових питань бот сповіщає команду в приватній адмін-групі й передає розмову живій підтримці.",
             focus:
-              "n8n workflow, який з'єднує Telegram Bot API, AI agent, knowledge-base logic, PostgreSQL conversation memory, ticket creation, human escalation, admin group notifications і safety rules, щоб bot не давав risky financial/legal promises та передавав сумнівні cases support-команді.",
-            stack: ["n8n", "Telegram Bot API", "AI Agent", "PostgreSQL", "Google Sheets", "Ticketing", "Escalation"],
+              "n8n-процес, який з'єднує Telegram Bot API, AI agent, логіку бази знань, пам'ять розмов у PostgreSQL, створення тікетів, ескалацію до людини, сповіщення в адмін-групу та правила безпеки, щоб бот не давав ризикованих фінансових або юридичних обіцянок і передавав сумнівні випадки команді підтримки.",
+            stack: ["n8n", "Telegram Bot API", "AI Agent", "PostgreSQL", "Google Sheets", "Тікети", "Ескалація"],
             highlights: [
-              "Request triage для registration, KYC, P2P deals, escrow, deposits/withdrawals, errors, merchants, security, compliance і general questions.",
-              "Ticket flow з user ID, email, deal number, screenshots, message description, category, priority і conversation history.",
-              "Human-in-the-loop escalation з Telegram alerts для urgent, financial, compliance, security або unclear cases.",
+              "Тріаж звернень щодо реєстрації, KYC, P2P-угод, escrow, поповнень і виведень, помилок, мерчантів, безпеки, комплаєнсу та загальних питань.",
+              "Процес створення тікета з user ID, email, номером угоди, скріншотами, описом повідомлення, категорією, пріоритетом та історією розмови.",
+              "Ескалація з участю людини та Telegram-сповіщеннями для термінових, фінансових, комплаєнс-, безпекових або неясних випадків.",
             ],
             screenshots: [
               {
                 src: "/projects/girex-workflow.png",
-                alt: "Girex n8n workflow",
+                alt: "n8n-процес Girex",
               },
               {
                 src: "/projects/girex-admin-alert.png",
-                alt: "Girex admin Telegram alert",
+                alt: "Telegram-сповіщення для адміністратора Girex",
               },
               {
                 src: "/projects/girex-bot-chat.png",
-                alt: "Girex support bot conversation",
+                alt: "Розмова з ботом підтримки Girex",
               },
             ],
           },
@@ -1013,95 +1015,99 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         {
           ...sharedProjects.portfolio,
           categoryLabel: "Portfolio як продуктова система",
-          status: "Live",
+          status: "Опубліковано",
+          previewLabel: "Портфоліо як продукт",
           summary:
-            "Персональне portfolio, подане як продукт: чітке позиціонування, мультимовний контент, responsive UI, selected cases, contact flow і Next.js delivery.",
+            "Персональне портфоліо, подане як продукт: чітке позиціонування, мультимовний контент, адаптивний інтерфейс, вибрані кейси, контактний шлях і доставка на Next.js.",
           caseStudy: {
-            type: "Personal portfolio як продукт",
+            type: "Персональне портфоліо як продукт",
             overview:
-              "Personal Portfolio System - це сайт, який ви зараз переглядаєте: сфокусований продукт для презентації моїх робіт, технічного діапазону та професійного напрямку. Ціль була не просто зробити profile page, а побудувати зрозумілий hiring/collaboration experience, де projects, experience, skills і contact options легко скануються.",
+              "Personal Portfolio System - це сайт, який ви зараз переглядаєте: сфокусований продукт для презентації моїх робіт, технічного діапазону та професійного напрямку. Ціль була не просто зробити сторінку профілю, а побудувати зрозумілий досвід для найму й співпраці, де проєкти, досвід, навички та варіанти контакту легко скануються.",
             focus:
-              "Implementation використовує Next.js App Router, React components, typed content, Tailwind CSS, responsive layouts, localized copy, accessible interactions, project case modals, optimized media handling і metadata для polished public portfolio.",
-            stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "App Router", "Responsive UI", "SEO"],
+              "Реалізація використовує Next.js App Router, React-компоненти, типізований контент, Tailwind CSS, адаптивні макети, локалізований текст, доступні взаємодії, модальні вікна кейсів, оптимізовану роботу з медіа та метадані для відшліфованого публічного портфоліо.",
+            stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "App Router", "Адаптивний UI", "SEO"],
             highlights: [
-              "Структурував сайт під decision-making: selected work спочатку, потім experience, capabilities, about і contact.",
-              "Побудував reusable multilingual content system, щоб English, Spanish і Ukrainian versions залишалися consistent.",
-              "Оформив project cards і case modals так, щоб кожен case показував problem, technical focus, stack і конкретні highlights.",
+              "Структурував сайт під ухвалення рішення: спочатку вибрані роботи, потім досвід, можливості, інформація про мене й контакти.",
+              "Побудував багаторазову мультимовну систему контенту, щоб англійська, іспанська та українська версії залишалися узгодженими.",
+              "Оформив картки проєктів і модальні вікна кейсів так, щоб кожен кейс показував задачу, технічний фокус, стек і конкретні сильні сторони.",
             ],
             screenshots: [
               {
                 src: "/projects/portfolio-site-cover.png",
-                alt: "Головна сторінка персонального portfolio",
+                alt: "Головна сторінка персонального портфоліо",
               },
             ],
           },
         },
         {
           ...sharedProjects.openclawDigest,
-          categoryLabel: "Personal AI automation",
+          categoryLabel: "Персональна AI-автоматизація",
+          previewLabel: "Дайджест за 24 години",
           summary:
-            "Personal OpenClaw agent, який моніторить вибрані Telegram chats/channels, фільтрує повідомлення за keywords, знаходить найважливіше і сам надсилає digest раз на 24 години.",
+            "Персональний агент OpenClaw, який моніторить вибрані Telegram-чати й канали, фільтрує повідомлення за ключовими словами, знаходить найважливіше та надсилає дайджест раз на 24 години.",
           caseStudy: {
-            type: "Autonomous community digest agent",
+            type: "Автономний агент для дайджесту спільноти",
             overview:
-              "OpenClaw Digest Agent - це персональна AI automation, яку я зробив для щоденного моніторингу потрібних Telegram chats і channels. Я задаю keywords і теми, а агент аналізує останні 24 години активності та знаходить найцінніші discussions, links і практичні сигнали.",
+              "OpenClaw Digest Agent - це персональна AI-автоматизація, яку я зробив для щоденного моніторингу потрібних Telegram-чатів і каналів. Я задаю ключові слова й теми, а агент аналізує останні 24 години активності та знаходить найцінніші обговорення, посилання й практичні сигнали.",
             focus:
-              "Workflow поєднує scheduled execution, Telegram monitoring, keyword filtering, AI summarization, relevance ranking і automatic delivery. На виході я отримую compact daily digest з quick summary, useful messages, original links, topics і поясненням, чому кожен пункт вартий уваги.",
-            stack: ["OpenClaw", "Telegram", "AI Agent", "Scheduler", "Keyword filters", "Digest automation"],
+              "Процес поєднує запуск за розкладом, моніторинг Telegram, фільтрацію за ключовими словами, AI-узагальнення, ранжування за релевантністю та автоматичну доставку. На виході я отримую компактний щоденний дайджест із коротким підсумком, корисними повідомленнями, оригінальними посиланнями, темами та поясненням, чому кожен пункт вартий уваги.",
+            stack: ["OpenClaw", "Telegram", "AI Agent", "Планувальник", "Фільтри ключових слів", "Автоматизація дайджесту"],
             highlights: [
-              "Моніторить вибрані chats і channels за custom keywords, без ручного перечитування всього потоку.",
-              "Витягує сильні discussions, useful links, original messages, topics і practical signals за останні 24 години.",
-              "Автоматично надсилає daily digest, щоб важлива інформація не губилася серед зайвого шуму.",
+              "Моніторить вибрані чати й канали за власними ключовими словами, без ручного перечитування всього потоку.",
+              "Витягує важливі обговорення, корисні посилання, оригінальні повідомлення, теми й практичні сигнали за останні 24 години.",
+              "Автоматично надсилає щоденний дайджест, щоб важлива інформація не губилася серед зайвого шуму.",
             ],
             screenshots: [
               {
                 src: "/projects/openclaw-community-digest.png",
-                alt: "OpenClaw community digest Telegram report",
+                alt: "Telegram-звіт дайджесту спільноти OpenClaw",
               },
             ],
           },
         },
         {
           ...sharedProjects.obsidianBrain,
-          categoryLabel: "Personal AI system",
+          categoryLabel: "Персональна AI-система",
+          previewLabel: "Асистент другого мозку",
           summary:
-            "Мій персональний AI assistant з Obsidian second brain: тримає структуровану пам'ять, зв'язує ідеї, проєкти й задачі та допомагає не починати контекст з нуля.",
+            "Мій персональний AI-асистент на базі Obsidian: тримає структуровану пам'ять, зв'язує ідеї, проєкти й задачі та допомагає не починати контекст з нуля.",
           caseStudy: {
-            type: "Personal AI assistant with structured memory",
+            type: "Персональний AI-асистент зі структурованою пам'яттю",
             overview:
-              "Obsidian Second Brain Agent - це мій власний AI assistant, побудований навколо структурованої Obsidian knowledge base. На відміну від звичайного чату, який швидко втрачає контекст, він працює з організованими notes, project history, ideas, decisions і personal workflows, які я можу постійно розвивати.",
+              "Obsidian Second Brain Agent - це мій власний AI-асистент, побудований навколо структурованої бази знань в Obsidian. На відміну від звичайного чату, який швидко втрачає контекст, він працює з організованими нотатками, історією проєктів, ідеями, рішеннями та персональними процесами, які я можу постійно розвивати.",
             focus:
-              "System з'єднує різні частини моєї роботи: tasks, product ideas, technical notes, client context, learning material і long-term plans. Assistant допомагає знаходити relevant information, будувати links між нотатками, пам'ятати commitments і продовжувати роботу з правильного контексту.",
-            stack: ["OpenClaw", "Obsidian", "AI Agent", "Knowledge Graph", "Markdown", "Personal automation"],
+              "Система з'єднує різні частини моєї роботи: задачі, продуктові ідеї, технічні нотатки, клієнтський контекст, навчальні матеріали й довгострокові плани. Асистент допомагає знаходити релевантну інформацію, будувати зв'язки між нотатками, пам'ятати домовленості та продовжувати роботу з правильного контексту.",
+            stack: ["OpenClaw", "Obsidian", "AI Agent", "Граф знань", "Markdown", "Персональна автоматизація"],
             highlights: [
-              "Використовує Obsidian як structured second brain, а не тільки тимчасову chat memory.",
-              "Зв'язує ideas, tasks, projects і notes, щоб потрібний context швидко повертався в роботу.",
-              "Допомагає не губити важливі decisions, follow-ups і knowledge між різними напрямками.",
+              "Використовує Obsidian як структурований другий мозок, а не лише тимчасову пам'ять чату.",
+              "Зв'язує ідеї, задачі, проєкти й нотатки, щоб потрібний контекст швидко повертався в роботу.",
+              "Допомагає не губити важливі рішення, подальші кроки й знання між різними напрямками.",
             ],
             screenshots: [],
           },
         },
         {
           ...sharedProjects.chat,
-          categoryLabel: "Embedded AI support",
+          categoryLabel: "Вбудована AI-підтримка",
+          previewLabel: "Чат-асистент RentAuto",
           summary:
-            "Chat assistant, вбудований у RentAuto: відповідає про vehicles, пропонує доступні авто, пояснює prices і веде user до reservation flow.",
+            "Чат-асистент, вбудований у RentAuto: відповідає на питання про авто, пропонує доступні варіанти, пояснює ціни й веде користувача до бронювання.",
           caseStudy: {
-            type: "AI assistant inside RentAuto",
+            type: "AI-асистент всередині RentAuto",
             overview:
-              "RentAuto AI Chat Assistant - це embedded support assistant всередині vehicle rental platform. User може питати natural-language questions про available cars, categories, prices, booking conditions і next steps без виходу з website.",
+              "RentAuto AI Chat Assistant - це вбудований асистент підтримки всередині платформи оренди авто. Користувач може природною мовою питати про доступні машини, категорії, ціни, умови бронювання та наступні кроки без виходу з сайту.",
             focus:
-              "Assistant побудований навколо реального RentAuto context: він може відповідати з relevant vehicle options, просити missing trip details як dates і passenger count, пояснювати booking process і вести user до reservation без unsupported promises.",
-            stack: ["Chatwoot", "AI Agent", "RentAuto", "Knowledge Base", "Automation"],
+              "Асистент побудований навколо реального контексту RentAuto: він може відповідати релевантними варіантами авто, просити відсутні деталі поїздки, наприклад дати й кількість пасажирів, пояснювати процес бронювання та вести користувача до резервування без непідтверджених обіцянок.",
+            stack: ["Chatwoot", "AI Agent", "RentAuto", "База знань", "Автоматизація"],
             highlights: [
-              "Відповідає на rental questions прямо всередині RentAuto website, без ручного пошуку по інтерфейсу.",
-              "Пропонує relevant cars з useful details: year, price per day, category і vehicle image preview.",
-              "Веде user до reservation flow, питаючи dates, travel context і passenger count, коли це потрібно.",
+              "Відповідає на питання про оренду прямо всередині сайту RentAuto, без ручного пошуку по інтерфейсу.",
+              "Пропонує релевантні авто з корисними деталями: рік, ціна за день, категорія та прев'ю зображення машини.",
+              "Веде користувача до бронювання, уточнюючи дати, контекст поїздки та кількість пасажирів, коли це потрібно.",
             ],
             screenshots: [
               {
                 src: "/projects/rentauto-chat-assistant-full.png",
-                alt: "RentAuto embedded AI chat assistant",
+                alt: "Вбудований AI-чат-асистент RentAuto",
               },
             ],
           },
@@ -1110,49 +1116,49 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     experience: {
       eyebrow: "Досвід",
-      title: "Від коду до production: досвід, який вирішує проблеми",
+      title: "Від коду до продакшну: досвід, який вирішує проблеми",
       description:
-        "Я поєдную розробку, дані, автоматизацію та production-системи: створюю корисні інструменти, вирішую реальні інциденти й допомагаю технічній роботі рухатися швидше.",
+        "Я поєдную розробку, дані, автоматизацію та продакшн-системи: створюю корисні інструменти, вирішую реальні інциденти й допомагаю технічній роботі рухатися швидше.",
       items: [
         {
           company: "OPINATOR",
-          role: "IT Support Technician",
+          role: "Технік IT-підтримки",
           period: "2026 - дотепер",
           summary:
-            "Практична підтримка production-систем з AWS, Linux, Git, security tasks і developer tooling.",
+            "Практична підтримка продакшн-систем з AWS, Linux, Git, задачами безпеки та інструментами для розробки.",
           points: [
-            "Керування та міграція AWS EC2 virtual machines, включно з configuration of instances та infrastructure maintenance у production.",
-            "Щоденна робота в Linux terminal environments з Git для version control і change management.",
-            "Діагностика та виправлення configuration errors і technical incidents через пошук root cause та зменшення operational impact.",
-            "Участь у cybersecurity tasks: log та incident monitoring, access/IAM management, patches і security updates.",
-            "Використання Claude Code у terminal для прискорення development і technical support tasks.",
+            "Керування та міграція віртуальних машин AWS EC2, включно з налаштуванням інстансів і підтримкою інфраструктури в продакшні.",
+            "Щоденна робота в Linux-терміналі з Git для контролю версій і керування змінами.",
+            "Діагностика та виправлення помилок конфігурації й технічних інцидентів через пошук першопричини та зменшення операційного впливу.",
+            "Участь у задачах кібербезпеки: моніторинг логів та інцидентів, керування доступами й IAM, патчі та оновлення безпеки.",
+            "Використання Claude Code у терміналі для прискорення задач розробки та технічної підтримки.",
           ],
-          tags: ["AWS EC2", "Linux", "Git", "IAM", "Logs", "Claude Code"],
+          tags: ["AWS EC2", "Linux", "Git", "IAM", "Логи", "Claude Code"],
         },
         {
           company: "Alenta",
-          role: "Database Developer and Digital Support Intern",
+          role: "Стажер із розробки баз даних і цифрової підтримки",
           period: "2026",
           summary:
             "Підтримка баз даних і внутрішніх процесів, щоб бізнес-дані були зрозумілішими й кориснішими.",
           points: [
-            "Керування та підтримка corporate databases у Microsoft Access.",
-            "Створення queries, forms і reports для оптимізації internal workflows.",
-            "Організація та структурування business data для покращення operational efficiency.",
+            "Керування та підтримка корпоративних баз даних у Microsoft Access.",
+            "Створення запитів, форм і звітів для оптимізації внутрішніх процесів.",
+            "Організація та структурування бізнес-даних для покращення операційної ефективності.",
           ],
-          tags: ["Microsoft Access", "Databases", "Reports"],
+          tags: ["Microsoft Access", "Бази даних", "Звіти"],
         },
         {
           company: "Naturprint Artes Graficas",
-          role: "Automation and Web Developer Intern",
+          role: "Стажер із веб-розробки та автоматизації",
           period: "2025",
           summary:
-            "Web, database і automation work для скорочення repetitive tasks та впорядкування internal processes.",
+            "Веб-розробка, робота з базами даних і автоматизація для скорочення повторюваних задач та впорядкування внутрішніх процесів.",
           points: [
-            "Розробка та керування MySQL databases через створення tables і SQL queries.",
-            "Автоматизація internal processes з Power Automate.",
-            "Створення та налаштування WordPress websites.",
-            "Оптимізація repetitive tasks related to data processing.",
+            "Розробка та керування базами даних MySQL через створення таблиць і SQL-запитів.",
+            "Автоматизація внутрішніх процесів за допомогою Power Automate.",
+            "Створення та налаштування сайтів на WordPress.",
+            "Оптимізація повторюваних задач, пов'язаних з обробкою даних.",
           ],
           tags: ["MySQL", "Power Automate", "WordPress", "SQL"],
         },
@@ -1160,64 +1166,64 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     services: {
       eyebrow: "Навички",
-      title: "Full-stack capabilities",
+      title: "Full-stack можливості",
       description:
         "Зони, де я можу бути корисним продуктовим командам, компаніям і вибраним технічним проєктам.",
       items: [
         {
           id: "frontend",
           eyebrow: "01",
-          title: "Frontend development",
+          title: "Frontend-розробка",
           subtitle: "Angular, React, TypeScript",
           description:
-            "Будую адаптивні інтерфейси, application flows, admin panels і product pages з увагою до UX.",
+            "Будую адаптивні інтерфейси, користувацькі сценарії, адмін-панелі та продуктові сторінки з увагою до UX.",
           includes: [
             "Angular і TypeScript",
             "React і Next.js",
-            "HTML, CSS, responsive UI",
-            "Component-based architecture",
+            "HTML, CSS, адаптивний інтерфейс",
+            "Компонентна архітектура",
           ],
         },
         {
           id: "backend",
           eyebrow: "02",
-          title: "Backend and APIs",
+          title: "Backend та API",
           subtitle: "NestJS, Node.js, Java, Python",
           description:
-            "Працюю з REST APIs, authentication, roles, payments, data validation та integrations.",
+            "Працюю з REST API, автентифікацією, ролями, платежами, валідацією даних та інтеграціями.",
           includes: [
             "NestJS і Node.js",
-            "Java і Python backends",
-            "REST APIs",
+            "Backend на Java і Python",
+            "REST API",
             "JWT, RBAC, Stripe",
           ],
         },
         {
           id: "data-cloud",
           eyebrow: "03",
-          title: "Data and cloud",
+          title: "Дані та cloud",
           subtitle: "PostgreSQL, MySQL, MongoDB, AWS",
           description:
-            "Моделюю relational data, пишу SQL, підключаю data layers і підтримую deployed systems.",
+            "Моделюю реляційні дані, пишу SQL, підключаю шари даних і підтримую розгорнуті системи.",
           includes: [
             "PostgreSQL і TypeORM",
             "MySQL і MongoDB",
-            "AWS EC2 basics",
+            "Основи AWS EC2",
             "Linux, logs, Git",
           ],
         },
         {
           id: "automation-ai",
           eyebrow: "04",
-          title: "Automation and AI",
-          subtitle: "n8n, Make, Power Automate, chatbots",
+          title: "Автоматизація та AI",
+          subtitle: "n8n, Make, Power Automate, чат-боти",
           description:
-            "З'єдную tools і data у workflows, які зменшують manual work, генерують reports і допомагають users.",
+            "З'єдную інструменти й дані у процеси, які зменшують ручну роботу, генерують звіти та допомагають користувачам.",
           includes: [
-            "n8n і Make workflows",
+            "Процеси на n8n і Make",
             "Power Automate",
-            "Telegram bots",
-            "RAG і AI assistants",
+            "Telegram-боти",
+            "RAG і AI-асистенти",
           ],
         },
       ],
@@ -1226,7 +1232,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Про мене",
       title: "Поєдную продукт, код і операційну частину",
       description:
-        "Працюю з web development, backend, databases, automation, cloud та AI integrations. Моя цінність не тільки в написанні коду, а в розумінні всього технічного потоку: від user-facing feature до systems, data та infrastructure за нею.",
+        "Працюю з веб-розробкою, backend, базами даних, автоматизацією, хмарними сервісами та AI-інтеграціями. Моя цінність не тільки в написанні коду, а в розумінні всього технічного потоку: від функції, яку бачить користувач, до систем, даних та інфраструктури за нею.",
       stackLabel: "Стек",
       stack: [
         "Angular",
@@ -1247,26 +1253,26 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       cards: [
         {
           eyebrow: "Профіль",
-          title: "End-to-end мислення",
+          title: "Мислення end-to-end",
           description:
-            "Можу рухатись від interface до API, database і deployment, не втрачаючи ціль functionality.",
-          tags: ["Frontend", "Backend", "Database"],
+            "Можу рухатись від інтерфейсу до API, бази даних і розгортання, не втрачаючи мету функціональності.",
+          tags: ["Frontend", "Backend", "Бази даних"],
           href: "#projects",
         },
         {
           eyebrow: "Сильна сторона",
           title: "Досвід з реальними системами",
           description:
-            "Практична робота з Linux, AWS, logs, IAM, incident diagnosis, updates і existing production environments.",
-          tags: ["AWS", "Linux", "Support"],
+            "Практична робота з Linux, AWS, логами, IAM, діагностикою інцидентів, оновленнями та наявними продакшн-середовищами.",
+          tags: ["AWS", "Linux", "Підтримка"],
           href: "#experience",
         },
         {
           eyebrow: "Додатково",
-          title: "Automation з реальним ефектом",
+          title: "Автоматизація з реальним ефектом",
           description:
-            "Використовую automation та AI для reporting, support, internal workflows і assistants, коли це реально економить час.",
-          tags: ["n8n", "AI", "Bots"],
+            "Використовую автоматизацію та AI для звітності, підтримки, внутрішніх процесів і асистентів, коли це реально економить час.",
+          tags: ["n8n", "AI", "Боти"],
           href: "#services",
         },
         {
@@ -1274,7 +1280,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           title: "Зрозуміла технічна комунікація",
           description:
             "Пояснюю рішення, ставлю правильні питання й тримаю технічну роботу зрозумілою для команд і власників бізнесу.",
-          tags: ["Clarity", "Teamwork", "Ownership"],
+          tags: ["Ясність", "Команда", "Відповідальність"],
           href: "#contact",
         },
       ],
@@ -1283,12 +1289,12 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Контакти",
       title: "Доступний для ролей і технічних проєктів",
       description:
-        "Доступний для ролей, співпраці та вибраних бізнес-проєктів у web development, backend, data, automation, cloud та AI.",
+        "Доступний для ролей, співпраці та вибраних бізнес-проєктів у веб-розробці, backend, роботі з даними, автоматизації, хмарних сервісах та AI.",
       primaryContact: "Основний контакт",
       telegram: "Написати в Telegram",
       email: "Написати на email",
     },
-    footer: "Full-stack developer portfolio.",
+    footer: "Портфоліо full-stack розробника.",
     accessibility: {
       skipToContent: "Перейти до вмісту",
       languageSwitcher: "Перемикач мови",
