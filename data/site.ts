@@ -155,18 +155,18 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           categoryLabel: "Full-stack rental platform",
           status: "Live",
           summary:
-            "A digital vehicle rental platform with catalog filters, availability checks, bookings, Stripe payments, admin tools, analytics, and AI/n8n automations.",
+            "A digital vehicle rental platform with catalog filters, availability checks, bookings, Stripe payments, admin tools, analytics, and AI/n8n automations for support, reporting, and checkout recovery.",
           caseStudy: {
             type: "Full-stack rental platform",
             overview:
               "RentAuto is an intelligent full-stack web platform for managing vehicle rental online. It centralizes the customer journey from browsing and filtering cars to checking availability, calculating the final rental price, creating reservations, paying online, and reviewing personal booking history. The product also includes a protected admin area for managing the fleet, reviewing reservations, and analyzing business activity.",
             focus:
-              "Layered architecture with Angular for the user interface, NestJS for the REST API and business logic, PostgreSQL with TypeORM for users, cars and rentals, JWT and bcrypt for authentication, guards and role-based access for protected routes, Stripe for payments, Docker-ready deployment, and n8n/AI automations connected to the database, Telegram, email and Stripe events.",
-            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
+              "Layered architecture with Angular for the user interface, NestJS for the REST API and business logic, PostgreSQL with TypeORM for users, cars and rentals, JWT and bcrypt for authentication, guards and role-based access for protected routes, Stripe for payments, Docker-ready deployment, and n8n/AI automations connected to the database, Telegram, email and Stripe events. The automation layer also includes a checkout recovery flow that follows up with customers after abandoned or failed payment attempts, asks what went wrong, and can send a promo code when friction blocked the purchase.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Email automation", "Docker"],
             highlights: [
               "Customer flow with registration, login, vehicle catalog, filters by dates, city, category and price, reservation history, availability validation and automatic price calculation.",
               "Admin dashboard with fleet management, protected administrative actions, reservation control, income metrics, new users, active cars, cancellations and most profitable vehicles.",
-              "Automation layer with a web AI assistant for users, database-aware answers, daily and weekly admin reports, Telegram admin chat, data-based recommendations, and Stripe payment recovery emails.",
+              "Business automation layer with a web AI assistant, database-aware answers, daily and weekly admin reports, Telegram admin chat, data-based recommendations, and checkout recovery emails for abandoned or failed Stripe payments.",
             ],
             screenshots: [
               {
@@ -553,18 +553,18 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           categoryLabel: "Plataforma full-stack",
           status: "Live",
           summary:
-            "Plataforma digital de alquiler de vehiculos con filtros, disponibilidad, reservas, pagos Stripe, administracion, estadisticas y automatizaciones IA/n8n.",
+            "Plataforma digital de alquiler de vehiculos con filtros, disponibilidad, reservas, pagos Stripe, administracion, estadisticas y automatizaciones IA/n8n para soporte, reporting y recuperacion de checkout.",
           caseStudy: {
             type: "Plataforma full-stack de alquiler",
             overview:
               "RentAuto es una plataforma web inteligente full-stack para gestionar el alquiler de vehiculos de forma digital. Centraliza el recorrido del cliente: consultar y filtrar coches, comprobar disponibilidad, calcular el precio final, crear reservas, avanzar en el pago online y revisar el historial personal. Tambien incluye una zona de administracion protegida para gestionar la flota, revisar reservas y analizar la actividad del negocio.",
             focus:
-              "Arquitectura por capas con Angular para la interfaz, NestJS para la API REST y la logica de negocio, PostgreSQL con TypeORM para usuarios, coches y reservas, JWT y bcrypt para autenticacion, guards y control de roles para rutas protegidas, Stripe para pagos, despliegue preparado con Docker y automatizaciones n8n/IA conectadas con base de datos, Telegram, correo y eventos de Stripe.",
-            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "IA", "Docker"],
+              "Arquitectura por capas con Angular para la interfaz, NestJS para la API REST y la logica de negocio, PostgreSQL con TypeORM para usuarios, coches y reservas, JWT y bcrypt para autenticacion, guards y control de roles para rutas protegidas, Stripe para pagos, despliegue preparado con Docker y automatizaciones n8n/IA conectadas con base de datos, Telegram, correo y eventos de Stripe. La capa de automatizacion tambien incluye un flujo de recuperacion de checkout que contacta a clientes tras abandonos o pagos fallidos, pregunta que salio mal y puede enviar un promocode cuando hubo friccion en la compra.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "IA", "Email automation", "Docker"],
             highlights: [
               "Flujo de cliente con registro, login, catalogo de vehiculos, filtros por fechas, ciudad, categoria y precio, historial de reservas, validacion de disponibilidad y calculo automatico del precio final.",
               "Dashboard administrativo con gestion de flota, acciones protegidas, control de reservas, ingresos, nuevos usuarios, coches activos, cancelaciones y vehiculos mas rentables.",
-              "Capa de automatizacion con asistente IA web para usuarios, respuestas conectadas a la base de datos, informes diarios y semanales para administradores, admin chat en Telegram, recomendaciones basadas en datos y correos de recuperacion por fallos de pago en Stripe.",
+              "Capa de automatizacion orientada al negocio con asistente IA web, respuestas conectadas a la base de datos, informes para administradores, admin chat en Telegram, recomendaciones y emails de recuperacion para checkouts abandonados o pagos fallidos en Stripe.",
             ],
             screenshots: [
               {
@@ -952,18 +952,18 @@ export const siteCopy: Record<Locale, SiteCopy> = {
           status: "Опубліковано",
           previewLabel: "Платформа оренди авто",
           summary:
-            "Цифрова платформа оренди авто з фільтрами, перевіркою доступності, бронюваннями, платежами через Stripe, адмін-інструментами, статистикою та AI/n8n автоматизаціями.",
+            "Цифрова платформа оренди авто з фільтрами, бронюваннями, Stripe-платежами, адмін-інструментами, статистикою та AI/n8n автоматизаціями для підтримки, звітів і відновлення checkout.",
           caseStudy: {
             type: "Full-stack платформа оренди",
             overview:
               "RentAuto - це full-stack веб-платформа для цифрового керування орендою автомобілів. Вона об'єднує шлях клієнта: перегляд і фільтрацію авто, перевірку доступності, автоматичний розрахунок ціни, бронювання, онлайн-оплату та історію особистих замовлень. Також є захищена адмін-зона для керування автопарком, перегляду бронювань і аналізу активності бізнесу.",
             focus:
-              "Багатошарова архітектура: Angular для інтерфейсу, NestJS для REST API та бізнес-логіки, PostgreSQL з TypeORM для користувачів, авто й оренд, JWT і bcrypt для автентифікації, guards і рольовий доступ для захищених маршрутів, платежі Stripe, підготовка до Docker-розгортання та n8n/AI автоматизації, підключені до бази даних, Telegram, email і подій Stripe.",
-            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Docker"],
+              "Багатошарова архітектура: Angular для інтерфейсу, NestJS для REST API та бізнес-логіки, PostgreSQL з TypeORM для користувачів, авто й оренд, JWT і bcrypt для автентифікації, guards і рольовий доступ для захищених маршрутів, платежі Stripe, підготовка до Docker-розгортання та n8n/AI автоматизації, підключені до бази даних, Telegram, email і подій Stripe. Шар автоматизацій також включає checkout recovery flow: після покинутого процесу покупки або failed payment клієнту надсилається email із питанням, що пішло не так, і за потреби промокодом, якщо проблема завадила завершити покупку.",
+            stack: ["Angular", "NestJS", "PostgreSQL", "TypeORM", "JWT/RBAC", "bcrypt", "Stripe", "n8n", "AI", "Email automation", "Docker"],
             highlights: [
               "Клієнтський процес із реєстрацією, входом, каталогом авто, фільтрами за датами, містом, категорією та ціною, історією бронювань, перевіркою доступності й автоматичним розрахунком фінальної вартості.",
               "Адмін-панель із керуванням автопарком, захищеними адміністративними діями, контролем бронювань, метриками доходу, новими користувачами, активними авто, скасуваннями та найприбутковішими машинами.",
-              "Шар автоматизацій із веб AI-асистентом для користувачів, відповідями з урахуванням даних із бази, щоденними й щотижневими звітами для адміністратора, Telegram-чатом для адміна, рекомендаціями на основі даних і листами для відновлення платежів Stripe.",
+              "Бізнес-орієнтований шар автоматизацій із веб AI-асистентом, відповідями з урахуванням даних із бази, звітами для адміністратора, Telegram-чатом, рекомендаціями та email flow для повернення покинутих checkout або failed Stripe payments.",
             ],
             screenshots: [
               {
