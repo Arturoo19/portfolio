@@ -10,7 +10,11 @@ export const owner = {
   phone: "+34 602 415 691",
   telegram: "https://t.me/tonn_19",
   telegramUsername: "@tonn_19",
-  cvHref: "/Artur AzizbekovCV.pdf",
+  cvHref: {
+    en: "/Artur AzizbekovCV.pdf",
+    es: "/Artur AzizbekovCV.es.pdf",
+    uk: "/Artur AzizbekovCV.pdf",
+  } satisfies Record<Locale, string>,
 };
 
 export const locales: Locale[] = ["en", "es", "uk"];

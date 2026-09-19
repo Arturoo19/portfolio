@@ -11,7 +11,7 @@ import { HeroPortrait } from "@/components/sections/HeroPortrait";
 import { owner } from "@/data/site";
 
 export function HeroSection() {
-  const { copy } = useLocale();
+  const { copy, locale } = useLocale();
   const sectionRef = useRef<HTMLElement>(null);
 
   const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
@@ -62,7 +62,7 @@ export function HeroSection() {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:mt-12 sm:flex-row sm:gap-4">
               <ButtonLink href="#contact">{copy.cta.hire} ↗</ButtonLink>
-              <ButtonLink href={owner.cvHref} variant="secondary" target="_blank">
+              <ButtonLink href={owner.cvHref[locale]} variant="secondary" target="_blank">
                 {copy.cta.cv}
               </ButtonLink>
               <ButtonLink href="#projects" variant="secondary">
